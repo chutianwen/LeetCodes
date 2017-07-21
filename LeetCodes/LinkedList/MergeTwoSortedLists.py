@@ -6,7 +6,7 @@ The new list should be made by splicing together the nodes of the first two list
 """
 from ListNode import ListNode
 class Solution(object):
-    def mergeTwoLists2(self, l1, l2):
+    def mergeTwoLists1(self, l1, l2):
         """
         :type l1: ListNode
         :type l2: ListNode
@@ -30,7 +30,7 @@ class Solution(object):
             cur.next = p2
         return head.next
 
-    def mergeTwoLists(self, l1, l2):
+    def mergeTwoLists2(self, l1, l2):
 
         if not l1 or not l2:
             return l1 or l2
@@ -44,8 +44,19 @@ class Solution(object):
 
     def mergeTwoLists3(self, l1, l2):
         """
-        merge in place, needs more thoughts
+        merge in place, pointer 'nxt' will always pointing next node in l1.
+        After loop, just check if l2 has left or not. If has, then cat l2 to the cur.next
+        l1: 1 -> 3 -> 5
+        l2: 2 -> 4 -> 6
+        step1 : dummy -> 1 -> 2 -> 3 -> 5
+        step2 : dummy -> 1 -> 2 -> 3 -> 4 -> 5
+        step3 : dummy -> 1 -> 2 -> 3 -> 4 -> 5 -> 6
 
+        l1: 4 -> 5 -> 6
+        l2: 1 -> 2 -> 3
+        step1: dummy -> 1 -> 4 -> 5 -> 6
+        step2: dummy -> 1 -> 2 -> 4 -> 5 -> 6
+        step3: dummy -> 1 -> 2 -> 3 -> 4 -> 5 -> 6
         :param l1:
         :param l2:
         :return:
@@ -64,7 +75,8 @@ class Solution(object):
                 l2.next = nxt
                 l2 = tmp
             cur = cur.next
-        cur.next = l1 or l2
+        if l2 is not None:
+            cur.next = l2
         return dummy.next
 
 def fun(l1, l2):

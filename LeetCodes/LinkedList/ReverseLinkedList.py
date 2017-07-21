@@ -4,40 +4,43 @@ Reverse a singly linked list.
 from ListNode import ListNode
 
 class Solution(object):
-    def reverseList2(self, head):
+    def reverseList1(self, head):
         """
-        modify in place
-        :type head: ListNode
+        modify list in place, needs three pointers.
+        1). Old head, which will become the tail at the end. old head.next should be the future head node
+        2). Next node: The one gonna become the new head, then back pointing to the next one in original list.
+        3). New Head: The new head of reversed list.
+        :type head: ListNode head will always pointing to the head of new reversed list.
         :rtype: ListNode
         """
-        # p1 is the old head
         if head is None:
             return None
-        p1 = head
-        p2 = head.next
-        while p2:
-            tmp = p2.next
-            p2.next = head
-            head = p2
-            p1.next = tmp
-            p2 = tmp
+        head_old = head
+        new_node = head.next
+        while new_node:
+            tmp = new_node.next
+            new_node.next = head
+            head = new_node
+            new_node = tmp
+        # cut the tail
+        head_old.next = None
         return head
 
-    def reverseList3(self, head):
+    def reverseList2(self, head):
         """
-        using another list, original list pop() and current list inserted
+        Creating another head, and grow this new list while chopping the original list.
         :param head:
         :return:
         """
         if head is None or head.next is None:
             return head
         p = head
+        # new List
         rev = None
         while p:
-            temp2 = rev
             temp3 = p.next
+            p.next = rev
             rev = p
-            rev.next = temp2
             p = temp3
             # rev, rev.next, p = p, rev, p.next
         return rev
@@ -54,7 +57,7 @@ class Solution(object):
             return head
         else:
             new_head = self.reverseList(head.next)
-            # actually head.next.next is the tail on the new reversed list, so tail.next = head
+            # actually head.next is the tail on the new reversed list, so tail.next = head
             head.next.next = head
             head.next = None
             return new_head
