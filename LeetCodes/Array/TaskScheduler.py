@@ -32,6 +32,6 @@ class Solution:
         slots = (tmax - 1) * n
         tsum = len(tasks)
         # ['A','A','A','B','B','B'], n = 0
-        # max(0, num_idles) is for n = 0 situation.
+        # max(0, num_idles) is for n = 0 or no idle spot situation
         num_idles = max(0, slots + tmax - 1 - sum(n - (n == tmax) for n in cnt.values()))
         return tsum + num_idles

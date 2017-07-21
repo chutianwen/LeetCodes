@@ -18,6 +18,7 @@ The integers in the given array are in the range of [0, 1000].
 
 import collections
 
+
 class triangleNumber:
     def triangleNumber(self, nums):
         """
@@ -45,17 +46,21 @@ class triangleNumber:
                     high_pointer -= 1
 
                 if mid_pointer == low_pointer:
-                    res += length_cnt[sorted_length[mid_pointer]] * (length_cnt[sorted_length[mid_pointer]] - 1 ) // 2 * \
+                    res += length_cnt[sorted_length[mid_pointer]] * (length_cnt[sorted_length[mid_pointer]] - 1) // 2 * \
                            (accumulated_cnt_on_length[high_pointer] - accumulated_cnt_on_length[mid_pointer])
-                    res += length_cnt[sorted_length[mid_pointer]] * (length_cnt[sorted_length[mid_pointer]] - 1 ) * \
+                    res += length_cnt[sorted_length[mid_pointer]] * (length_cnt[sorted_length[mid_pointer]] - 1) * \
                            (length_cnt[sorted_length[mid_pointer]] - 2) // 6
 
                 elif mid_pointer > low_pointer:
                     res += length_cnt[sorted_length[low_pointer]] * length_cnt[sorted_length[mid_pointer]] * \
                            (accumulated_cnt_on_length[high_pointer] - accumulated_cnt_on_length[mid_pointer])
                     res += length_cnt[sorted_length[low_pointer]] * length_cnt[sorted_length[mid_pointer]] * \
-                           (length_cnt[sorted_length[mid_pointer]] -1 ) // 2
+                           (length_cnt[sorted_length[mid_pointer]] - 1) // 2
 
                 low_pointer -= 1
 
         return res
+
+
+res = triangleNumber().triangleNumber([1, 2, 3, 4, 2, 1, 2, 45])
+print(res)
