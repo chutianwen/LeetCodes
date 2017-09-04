@@ -14,9 +14,7 @@ class RandomListNode(object):
 class Solution(object):
     def copyRandomList(self, head):
         """
-        The trick is to link the random node.
-        Using a map to store: original object -> new object.
-        Considering map[p] as a reference.
+        Needs to store a relationship map : reference -> actual object
         :type head: RandomListNode
         :rtype: RandomListNode
         """
@@ -27,9 +25,18 @@ class Solution(object):
         while p:
             map[p] = RandomListNode(p.label)
             p = p.next
+
         p = head
         while p:
+            print(p)
+            print(map[p])
             map[p].next = map.get(p.next, None)
             map[p].random = map.get(p.random, None)
             p = p.next
         return map[head]
+
+head = RandomListNode(2)
+head.next = RandomListNode(3)
+head.random = RandomListNode(4)
+
+res = Solution().copyRandomList(head)

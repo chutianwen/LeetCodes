@@ -15,7 +15,9 @@ Output: [1, 3, 9]
 
 from TreeNode import TreeNode
 import sys
+
 class Solution(object):
+
     def largestValues2(self, root):
         """
         :type root: TreeNode
@@ -44,7 +46,6 @@ class Solution(object):
     def largestValues(self, root):
 
         def driver(root, max_v, depth):
-
             if root is None:
                 return
             else:

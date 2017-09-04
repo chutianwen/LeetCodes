@@ -52,31 +52,42 @@ class Solution(object):
 
     def pathSum(self, root, sum):
 
-        def driver(root, target, cur, map):
+        def driver(root, target, cur_sum, sums):
+            """
 
+            :param root:
+            :param target:
+            :param cur:
+            :param sums: set()
+            :return:
+            """
+
+            cnt = 0
             if root is None:
-                return
+                return 0
             else:
-                cur += root.val
-                if cur not in map:
-                    map[cur] = 0
-                if cur - target in map:
-                    map[cur - target] += 1
-                driver(root.left, target, cur, map)
-                # needs back tracking here
-                # map.pop
-                driver(root.right, target, cur, map)
-                # needs back tracking here
+                cur_sum += root.val
+                if cur_sum - target in sums:
+                    cnt += sums[cur_sum - target]
 
-        res = {0:0}
-        driver(root, sum, 0, res)
-        cnt = 0
-        for x, y in res.items():
-            cnt += y
-        return cnt
+                if cur_sum not in sums:
+                    sums[cur_sum] = 1
+                else:
+                    sums[cur_sum] += 1
+                cnt += driver(root.left, target, cur_sum, sums)
+                cnt += driver(root.right, target, cur_sum, sums)
+                # back propagation here.
+                sums[cur_sum] -= 1
+                return cnt
+        # in case the cur_sum is the target
+        sums = {0: 1}
 
-root = TreeNode(1)
-root.left = TreeNode(-2)
-root.right = TreeNode(-3)
-res = Solution().pathSum(root, -1)
+        return driver(root, sum, 0, sums)
+
+root = TreeNode(0)
+root.left = TreeNode(1)
+root.right = TreeNode(0)
+# root.right.right = TreeNode(1)
+# root.right.left = TreeNode(1)
+res = Solution().pathSum(root, 1)
 print(res)

@@ -64,3 +64,4 @@ class triangleNumber:
 
 res = triangleNumber().triangleNumber([1, 2, 3, 4, 2, 1, 2, 45])
 print(res)
+

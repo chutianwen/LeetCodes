@@ -21,6 +21,7 @@ A solution set is:
 class Solution(object):
     def combinationSum2(self, candidates, target):
         """
+        Time: O(2^n) Think each position as a binary variable, totally have 2^n combinations of substrings(including itself)
         :type candidates: List[int]
         :type target: int
         :rtype: List[List[int]]
@@ -33,12 +34,12 @@ class Solution(object):
         for id, num in enumerate(candidates):
             subs = self.combinationSum2(candidates[id + 1:], target - num)
             for sub in subs:
-                sub.append(num)
+                sub.insert(0, num)
             res.extend(subs)
 
         return res
 
 
 res = Solution().combinationSum2([1, -1, 2, -2, 0, 3, 3], 0)
-res = list(map(list, list(set(map(tuple, res)))))
+res = list(map(list, set(map(tuple, res))))
 print(res)
