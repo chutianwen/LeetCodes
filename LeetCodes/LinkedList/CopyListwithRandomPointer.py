@@ -14,7 +14,9 @@ class RandomListNode(object):
 class Solution(object):
     def copyRandomList(self, head):
         """
-        Needs to store a relationship map : reference -> actual object
+        The trick is to link the random node.
+        Using a map to store: original object -> new object.
+        Considering map[p] as a reference.
         :type head: RandomListNode
         :rtype: RandomListNode
         """
