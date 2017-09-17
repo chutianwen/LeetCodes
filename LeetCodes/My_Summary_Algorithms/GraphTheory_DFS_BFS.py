@@ -1,10 +1,10 @@
 '''
 Compare different version of DFS, BFS, Shortest Path dijkstra's
-To-do: BFS, dijkstra and Time complexity discussion.
+To-do: BFS, dijkstra and Time complexity discussion. DFS with memory in matrix.
 Resource link:
 http://eddmann.com/posts/depth-first-search-and-breadth-first-search-in-python/
 '''
-
+from collections import deque
 
 class DfsFamily:
 
@@ -22,7 +22,6 @@ class DfsFamily:
         :param start:
         :return:
         '''
-        res = []
         visited, stack = set(), [start]
         while stack:
             # explore node
@@ -231,6 +230,104 @@ class DfsFamily:
             valid_paths.extend(sub_paths)
         return valid_paths
 
+    @staticmethod
+    def run_test(graph):
+        print("{}{}{}".format("-" * 15, "Two versions of iterative methods of DFS", "-" * 15))
+
+        # {'E', 'D', 'F', 'A', 'C', 'B'}
+        dfs_traversal = DfsFamily.dfs_traversal_mark_popnode_visited(graph, 'A')
+        print("{:50s}:{}".format("dfs_traversal_mark_popnode_visited", dfs_traversal))
+
+        path = DfsFamily.dfs_search_mark_popnode_visited(graph, 'A', 'C')
+        print("{:50s}:{}".format("dfs_search_mark_popnode_visited", path))
+
+        path = DfsFamily.dfs_search_all_path_mark_popnode_visited(graph, 'A', 'C')
+        print("{:50s}:{}".format("dfs_search_all_path_mark_popnode_visited", path))
+
+        print("-" * 50)
+
+        dfs_traversal = DfsFamily.dfs_traversal_mark_neighbor_visited(graph, 'A')
+        print("{:50s}:{}".format("dfs_traversal_mark_neighbor_visited", dfs_traversal))
+
+        path = DfsFamily.dfs_search_mark_neighbor_visited(graph, 'A', 'C')
+        print("{:50s}:{}".format("dfs_search_mark_neighbor_visited", path))
+
+        path = DfsFamily.dfs_search_all_path_mark_neighbor_visited(graph, 'A', 'C')
+        print("{:50s}:{}".format("dfs_search_all_path_mark_neighbor_visited", path))
+
+        print("{}{}{}".format("-" * 15, "Recursive version of DFS", "-" * 15))
+
+        dfs_traversal = DfsFamily.dfs_traversal_recursive(graph, 'A')
+        print("{:50s}:{}".format("dfs_traversal_recursive", dfs_traversal))
+
+        path = DfsFamily.dfs_search_recursive(graph, 'A', 'C')
+        print("{:50s}:{}".format("dfs_search_recursive", path))
+
+        path = list(DfsFamily.dfs_search_all_path_recursive(graph, 'A', 'C'))
+        print("{:50s}:{}".format("dfs_search_all_path_recursive", path))
+
+        path = DfsFamily.dfs_search_all_path_recursive2(graph, 'A', 'C')
+        print("{:50s}:{}".format("dfs_search_all_path_recursive2", path))
+
+class BfsFamily:
+    @staticmethod
+    def bfs_traversal_mark_popnode_visited(graph, start):
+        visited, candidates = set(), deque([start])
+        while candidates:
+            cur_node = candidates.popleft()
+            if cur_node not in visited:
+                visited.add(cur_node)
+                candidates.extend(graph[cur_node] - visited)
+        return visited
+
+    @staticmethod
+    def bfs_search_mark_popnode_visited(graph, start, target):
+        visited, candidates = set(), deque([(start, [start])])
+        while candidates:
+            cur_node, path = candidates.pop()
+            if cur_node == target:
+                return path
+            if cur_node not in visited:
+                visited.add(cur_node)
+                candidates.extend([(neighbor, path + [neighbor])
+                                   for neighbor in graph[cur_node] if neighbor not in visited])
+        return "Target not in graph!"
+
+    @staticmethod
+    def bfs_search_all_path_mark_popnode_visited(graph, start, target):
+        '''
+        Return all paths from start to target. Trick part is to check if the neighbor is in current path. This is to avoid
+        a loop path. Say from A-B-C-[A-B-C-A...], will become an infinite loop.
+        To get all paths, we cannot use a global variable 'visited' to 'manipulate' the graph. Instead, we should use a local
+        path variable for each node.
+        :param graph:
+        :param start:
+        :param target:
+        :return:
+        '''
+        valid_paths = []
+        candidates = deque([(start, [start])])
+        while candidates:
+            cur_node, path = candidates.pop()
+            if cur_node == target:
+                valid_paths.append(path)
+            candidates.extend([(neighbor, path + [neighbor]) for neighbor in graph[cur_node] if neighbor not in path])
+        return valid_paths
+
+    @staticmethod
+    def run_test(graph):
+
+        print("{}{}{}".format("-" * 15, "Two versions of iterative methods of BFS", "-" * 15))
+
+        bfs_traversal = BfsFamily.bfs_traversal_mark_popnode_visited(graph, 'A')
+        print("{:50s}:{}".format("bfs_traversal_mark_popnode_visited", bfs_traversal))
+
+        path = BfsFamily.bfs_search_mark_popnode_visited(graph, 'A', 'C')
+        print("{:50s}:{}".format("bfs_search_mark_popnode_visited", path))
+
+        path = BfsFamily.bfs_search_all_path_mark_popnode_visited(graph, 'A', 'C')
+        print("{:50s}:{}".format("bfs_search_all_path_mark_popnode_visited", path))
+
 if __name__ == "__main__":
 
     graph = {'A': {'B', 'C'},
@@ -240,42 +337,8 @@ if __name__ == "__main__":
              'E': {'B', 'F'},
              'F': {'C', 'E'}}
 
-    print("{}{}{}".format("-" * 15, "Two versions of iterative methods of DFS", "-" * 15))
-
-    # {'E', 'D', 'F', 'A', 'C', 'B'}
-    dfs_traversal = DfsFamily.dfs_traversal_mark_popnode_visited(graph, 'A')
-    print("{:50s}:{}".format("dfs_traversal_mark_popnode_visited", dfs_traversal))
-
-    path = DfsFamily.dfs_search_mark_popnode_visited(graph, 'A', 'C')
-    print("{:50s}:{}".format("dfs_search_mark_popnode_visited", path))
-
-    path = DfsFamily.dfs_search_all_path_mark_popnode_visited(graph, 'A', 'C')
-    print("{:50s}:{}".format("dfs_search_all_path_mark_popnode_visited", path))
-
-    print("-" * 50)
-
-    dfs_traversal = DfsFamily.dfs_traversal_mark_neighbor_visited(graph, 'A')
-    print("{:50s}:{}".format("dfs_traversal_mark_neighbor_visited", dfs_traversal))
-
-    path = DfsFamily.dfs_search_mark_neighbor_visited(graph, 'A', 'C')
-    print("{:50s}:{}".format("dfs_search_mark_neighbor_visited", path))
-
-    path = DfsFamily.dfs_search_all_path_mark_neighbor_visited(graph, 'A', 'C')
-    print("{:50s}:{}".format("dfs_search_all_path_mark_neighbor_visited", path))
-
-    print("{}{}{}".format("-" * 15, "Recursive version of DFS", "-" * 15))
-
-    dfs_traversal = DfsFamily.dfs_traversal_recursive(graph, 'A')
-    print("{:50s}:{}".format("dfs_traversal_recursive", dfs_traversal))
-
-    path = DfsFamily.dfs_search_recursive(graph, 'A', 'C')
-    print("{:50s}:{}".format("dfs_search_recursive", path))
-
-    path = list(DfsFamily.dfs_search_all_path_recursive(graph, 'A', 'C'))
-    print("{:50s}:{}".format("dfs_search_all_path_recursive", path))
-
-    path = DfsFamily.dfs_search_all_path_recursive2(graph, 'A', 'C')
-    print("{:50s}:{}".format("dfs_search_all_path_recursive2", path))
+    DfsFamily.run_test(graph)
+    BfsFamily.run_test(graph)
 
 
 
