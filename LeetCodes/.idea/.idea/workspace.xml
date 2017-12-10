@@ -1,73 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="17796572-4ec0-4379-8e46-abd317c4a287" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/Array/BestTimetoBuyandSellStock.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Array/BestTimetoBuyandSellStockII.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Array/IntersectionofTwoArraysII.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Array/LongestIncreasingSubsequence.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Array/ShuffleanArray.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Array/TopKFrequentElements.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/BitManipulation/SumofTwoIntegers.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/DFS/TargetSum.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/DFS/minDepth.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/DataScienceCheetSheet/Numpys/random_pick.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Math/HappyNumber.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Math/Power of Three.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Strings/ImplementstrStr().py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Strings/LongestUncommonSubsequenceI.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Strings/ReverseString.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Strings/ReverseStringII.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Strings/ReverseWordsinaStringIII.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Strings/RomantoInteger.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Strings/ValidateIPAddress.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Trees/FindDuplicateSubtrees.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Trees/TreeNotes.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/TwoPointer/FindPairToTargetFromTwoArrays.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/TwoPointer/TwoPointer.iml" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/preferred-vcs.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/sf-acc.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/PythonNotes-checkpoint.ipynb" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/Test-checkpoint.ipynb" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/Untitled-checkpoint.ipynb" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/Untitled1-checkpoint.ipynb" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/Untitled2-checkpoint.ipynb" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Google/LongestIncreasingPathinaMatrix.py" afterPath="$PROJECT_DIR$/Google/LongestIncreasingPathinaMatrix.py" />
-      <change beforePath="$PROJECT_DIR$/Google/MathEquationCombination.py" afterPath="$PROJECT_DIR$/Google/MathEquationCombination.py" />
-      <change beforePath="$PROJECT_DIR$/My_Summary_Algorithms/GraphTheory_DFS_BFS.py" afterPath="$PROJECT_DIR$/My_Summary_Algorithms/GraphTheory_DFS_BFS.py" />
-      <change beforePath="$PROJECT_DIR$/Test.ipynb" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Untitled.ipynb" afterPath="$PROJECT_DIR$/Untitled.ipynb" />
-      <change beforePath="$PROJECT_DIR$/Untitled1.ipynb" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Untitled2.ipynb" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../README.md" afterPath="$PROJECT_DIR$/../README.md" />
-    </list>
+    <list default="true" id="f6982b72-b652-47e1-9d6f-bfb205a0712b" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="NumberofIslandsII.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Google/NumberofIslandsII.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="22">
-              <caret line="27" column="29" lean-forward="true" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
@@ -80,7 +20,6 @@
     <option name="width" value="2514" />
     <option name="height" value="1444" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -98,28 +37,13 @@
     <panes>
       <pane id="Scratches" />
       <pane id="AndroidView" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="LeetCodes" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LeetCodes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="LeetCodes" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LeetCodes" type="462c0819:PsiDirectoryNode" />
-              <item name="Google" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="PackagesPane" />
+      <pane id="ProjectPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -135,7 +59,6 @@
   </component>
   <component name="RunManager">
     <configuration default="true" type="Applet" factoryName="Applet">
-      <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
       <option name="HEIGHT" value="300" />
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
@@ -166,7 +89,7 @@
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="TEST_SEARCH_SCOPE">
@@ -195,7 +118,7 @@
       <option name="TEST_OBJECT" value="CLASS" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <option name="OUTPUT_DIRECTORY" />
       <option name="ANNOTATION_TYPE" />
       <option name="ENV_VARIABLES" />
@@ -229,11 +152,11 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="17796572-4ec0-4379-8e46-abd317c4a287" name="Default" comment="" />
-      <created>1512919850731</created>
+      <changelist id="f6982b72-b652-47e1-9d6f-bfb205a0712b" name="Default" comment="" />
+      <created>1512919810849</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1512919850731</updated>
+      <updated>1512919810849</updated>
     </task>
     <servers />
   </component>
@@ -248,8 +171,8 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3299611" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24979626" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -274,14 +197,20 @@
     <breakpoint-manager />
     <watches-manager />
   </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Google/NumberofIslandsII.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="27" column="29" lean-forward="true" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+  <component name="masterDetails">
+    <states>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>

@@ -39,22 +39,45 @@ class Solution(object):
         m, n = len(matrix), len(matrix[0])
         cached = np.zeros([m, n], dtype='i')
 
+<<<<<<< HEAD
+        def dfs(row, col):
+            '''
+
+            :param row:
+            :param col:
+            :return:
+            '''
+            # if cached[row][col] != 0:
+            #     return cached[row][col]
+=======
         def dfs(cached, row, col):
             if cached[row][col] != 0:
                 return cached[row][col]
+>>>>>>> d8bc092d4a25205fe45e0064a4f160d6e9bae3f5
             res = 1
             for dir in directions:
                 x, y = row + dir[0], col + dir[1]
                 if x < 0 or x >= m or y < 0 or y >= n or matrix[x][y] <= matrix[row][col]:
                     continue
+<<<<<<< HEAD
+                if cached[x][y] != 0:
+                    res = max(res, cached[x][y] + 1)
+                else:
+                    res = max(res, dfs(x, y) + 1)
+=======
                 res = max(res, dfs(cached, x, y) + 1)
+>>>>>>> d8bc092d4a25205fe45e0064a4f160d6e9bae3f5
             cached[row][col] = res
             return res
 
         path_length = 0
         for row in range(m):
             for col in range(n):
+<<<<<<< HEAD
+                path_cur = dfs(row, col)
+=======
                 path_cur = dfs(cached, row, col)
+>>>>>>> d8bc092d4a25205fe45e0064a4f160d6e9bae3f5
                 path_length = max(path_length, path_cur)
         return path_length
 

@@ -231,6 +231,71 @@ class DfsFamily:
         return valid_paths
 
     @staticmethod
+<<<<<<< HEAD
+    def dfs_memory_longest_increasing_path_in_matrix(matrix):
+        '''
+        When dfs searching in a matrix with multiple directions. We can define a direction list.
+        This case, when searching neighbors, we don't know the neighbor node but edges.(Edge is direction). Then we
+        can check if neighbor visited or not by using a cache checking at the beginning of dfs call.
+        Time complexity : O(mn)O(mn).
+        Each vertex/cell will be calculated once and only once, and each edge will be visited once and only once.
+        The total time complexity is then O(V+E)O(V+E). VV is the total number of vertices and EE is the total
+        number of edges. In our problem, O(V) = O(mn)O(V)=O(mn), O(E) = O(4V) = O(mn)O(E)=O(4V)=O(mn).
+
+        Space complexity : O(mn)O(mn). The cache dominates the space complexity.
+
+        If only use DFS without visit set or memory, worst case O should be O(2^(m+n)), the longest path has length
+        m + n, each time can take actions only from "down or right". Will be a lot of re-compute. Given example below,
+        the longest path will follow "right, down, right down" teeth route.
+        1 2 3 . . . n
+        2 3 . . .   n+1
+        3 . . .     n+2
+        .           .
+        .           .
+        .           .
+        m m+1 . . . n+m-1
+        :param matrix: list[list[int]]
+        :return:
+        '''
+        m, n = len(matrix), len(matrix[0])
+        cached = [[0 for _ in range(n)] for _ in range(m)]
+        directions = [[0, 1], [0, -1], [-1, 0], [1, 0]]
+
+        def driver(row, col):
+            '''
+            Cache here is more like the visited mask. Calling up front is faster because of double for loop calling
+            outside. But we can also check right after searching neighbors.
+            Cache as visited mask is assigned after for loop of searching neighbors, this is different than previous
+            dfs searching method.
+            :param row:
+            :param col:
+            :return:
+            '''
+            # If visited, then return result directly.
+            if cached[row][col] != 0:
+                return cached[row][col]
+            path_length = 1
+            for dir in directions:
+                x, y = row + dir[0], col + dir[1]
+                if x < 0 or x >= m or y < 0 or y >= n or matrix[x][y] <= matrix[row][col]:
+                    continue
+                # Check if neighbor already visited, then no need to call again.
+                if cached[x][y] != 0:
+                    path_length = max(path_length, cached[x][y] + 1)
+                else:
+                    path_length = max(path_length, driver(x, y) + 1)
+            cached[row][col] = path_length
+            return path_length
+
+        longest_path = 0
+        for row in range(m):
+            for col in range(n):
+                longest_path = max(longest_path, driver(row, col))
+        return longest_path
+
+    @staticmethod
+=======
+>>>>>>> d8bc092d4a25205fe45e0064a4f160d6e9bae3f5
     def run_test(graph):
         print("{}{}{}".format("-" * 15, "Two versions of iterative methods of DFS", "-" * 15))
 
@@ -269,6 +334,16 @@ class DfsFamily:
         path = DfsFamily.dfs_search_all_path_recursive2(graph, 'A', 'C')
         print("{:50s}:{}".format("dfs_search_all_path_recursive2", path))
 
+<<<<<<< HEAD
+        nums = [[7, 6, 1, 1],
+                [2, 7, 6, 0],
+                [1, 3, 5, 1],
+                [6, 6, 3, 2]]
+        longest_path = DfsFamily.dfs_memory_longest_increasing_path_in_matrix(nums)
+        print("{:50}:{}".format("Longest length of increasing path is:", longest_path))
+
+=======
+>>>>>>> d8bc092d4a25205fe45e0064a4f160d6e9bae3f5
 class BfsFamily:
     @staticmethod
     def bfs_traversal_mark_popnode_visited(graph, start):
