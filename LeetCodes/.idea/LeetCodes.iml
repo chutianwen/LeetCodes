@@ -2,7 +2,24 @@
 <module type="JAVA_MODULE" version="4">
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
-    <content url="file://$MODULE_DIR$" />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/Amazon" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Array" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/BackTracking" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/BitManipulation" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/DataScienceCheetSheet" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/DataScienceCheetSheet/Numpys" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/DataScienceCheetSheet/Panda" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/DFS" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Google" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/InterviewQuestions" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/LinkedList" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Math" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/My_Summary_Algorithms" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Strings" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Trees" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/TwoPointer" isTestSource="false" />
+    </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>

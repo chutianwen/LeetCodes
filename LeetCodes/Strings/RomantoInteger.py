@@ -10,12 +10,15 @@ class Solution(object):
         :type s: str
         :rtype: int
         """
-        roman_dict = {'I': 1, 'V':5, 'X':10, 'L':50, 'C':100, 'D':500, 'M': 1000}
+        if not s or len(s) == 0:
+            return 0
+
+        ref = {"I": 1, "V": 5, "X": 10, "L": 50, "C": 100, "D": 500, "M": 1000}
+        pre = None
         res = 0
-        for id in range(len(s) - 1):
-            if roman_dict[s[id]] < roman_dict[s[id + 1]]:
-                res -= roman_dict[s[id]]
-            else:
-                res += roman_dict[s[id]]
-        res += roman_dict[s[-1]]
+        for letter in s:
+            if pre and ref[letter] > pre:
+                res = res - pre * 2
+            res += ref[letter]
+            pre = ref[letter]
         return res

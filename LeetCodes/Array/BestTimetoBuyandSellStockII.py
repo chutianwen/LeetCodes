@@ -22,6 +22,6 @@ class Solution(object):
             sum_p = 0
             pre = prices[0]
             for price in prices[1:]:
-                sum_p = max(0, price - pre)
+                sum_p += max(0, price - pre)
                 pre = price
             return sum_p
