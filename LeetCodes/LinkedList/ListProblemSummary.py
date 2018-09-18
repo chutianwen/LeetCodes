@@ -66,6 +66,15 @@ class ListProblemSummary:
 			# throw error.
 			head.next, new_head, head = new_head, head, head.next
 
+	def reverse_list_recursive(self, head: ListNode):
+		if not head or not head.next:
+			return head
+		else:
+			tail = head.next
+			new_head = self.reverse_list_recursive(head.next)
+			tail.next = head
+			head.next = None
+			return new_head
 
 	def reverse_first_k(self, head: ListNode, k):
 
@@ -127,8 +136,11 @@ tool.print_list(head.next)
 # Get mid
 tool.get_mid_entry(head.next)
 
+# reverse by recursion
+res = tool.reverse_list_recursive(head.next)
+tool.print_list(res)
 # reverse k
 # tool.reverse_first_k(head.next, 3)
 
 # reverse k group
-tool.reverse_k_group(head.next, 2)
+# tool.reverse_k_group(head.next, 2)

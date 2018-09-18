@@ -19,6 +19,10 @@
       <sourceFolder url="file://$MODULE_DIR$/Strings" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Trees" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/TwoPointer" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Linkedin" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/stackexe" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/microsoft" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/facebook" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
