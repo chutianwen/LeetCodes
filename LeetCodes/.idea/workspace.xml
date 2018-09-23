@@ -2,17 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="17796572-4ec0-4379-8e46-abd317c4a287" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Google/Plus One Linked List.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LinkedList/Design Phone Directory.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LinkedList/Middle of the Linked List.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Linkedin/Max Points on a Line.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/facebook/Insert into a Cyclic Sorted List.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/facebook/Read N Characters Given Read4.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/microsoft/Odd Even Linked List.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/microsoft/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/LeetCodes.iml" afterPath="$PROJECT_DIR$/.idea/LeetCodes.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Array/BinarySearchNotes.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Array/FirstK.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Google/Guess Number Higher or Lower II.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Google/Guess Number Higher or Lower.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/facebook/Closest Binary Search Tree Value.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/facebook/Find K Closest Elements.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/facebook/Maximum Sum of 3 Non-Overlapping Subarrays.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/facebook/Robot Room Cleaner.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/facebook/Shortest Subarray with Sum at Least K.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/facebook/Substring with Concatenation of All Words.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/facebook/Task Scheduler.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/facebook/Walls and Gates.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/facebook/Word Break II.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LinkedList/ListProblemSummary.py" afterPath="$PROJECT_DIR$/LinkedList/ListProblemSummary.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/facebook/RegularExpressionMatching.py" afterPath="$PROJECT_DIR$/facebook/RegularExpressionMatching.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/facebook/SearchinRotatedSortedArray.py" afterPath="$PROJECT_DIR$/facebook/SearchinRotatedSortedArray.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -23,78 +28,68 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ListProblemSummary.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/LinkedList/ListProblemSummary.py">
+      <file leaf-file-name="Closest Binary Search Tree Value.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/facebook/Closest Binary Search Tree Value.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1726">
-              <caret line="102" column="30" lean-forward="true" selection-start-line="102" selection-start-column="30" selection-end-line="102" selection-end-column="30" />
+            <state relative-caret-position="561">
+              <caret line="57" column="0" lean-forward="true" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Plus One Linked List.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Google/Plus One Linked List.py">
+      <file leaf-file-name="Walls and Gates.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/facebook/Walls and Gates.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="371">
-              <caret line="31" column="23" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="57" selection-end-column="23" />
+            <state relative-caret-position="646">
+              <caret line="38" column="87" lean-forward="false" selection-start-line="38" selection-start-column="87" selection-end-line="38" selection-end-column="87" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Odd Even Linked List.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/microsoft/Odd Even Linked List.py">
+      <file leaf-file-name="Shortest Subarray with Sum at Least K.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/facebook/Shortest Subarray with Sum at Least K.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="555">
-              <caret line="46" column="17" lean-forward="true" selection-start-line="46" selection-start-column="17" selection-end-line="46" selection-end-column="17" />
+            <state relative-caret-position="310">
+              <caret line="44" column="90" lean-forward="true" selection-start-line="44" selection-start-column="90" selection-end-line="44" selection-end-column="90" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Middle of the Linked List.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/LinkedList/Middle of the Linked List.py">
+      <file leaf-file-name="Find K Closest Elements.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/facebook/Find K Closest Elements.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="572">
-              <caret line="37" column="11" lean-forward="true" selection-start-line="37" selection-start-column="11" selection-end-line="37" selection-end-column="11" />
+            <state relative-caret-position="459">
+              <caret line="27" column="23" lean-forward="true" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Design Phone Directory.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/LinkedList/Design Phone Directory.py">
+      <file leaf-file-name="SearchinRotatedSortedArray.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/facebook/SearchinRotatedSortedArray.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="555">
-              <caret line="53" column="77" lean-forward="true" selection-start-line="53" selection-start-column="77" selection-end-line="53" selection-end-column="77" />
+            <state relative-caret-position="0">
+              <caret line="0" column="3" lean-forward="true" selection-start-line="0" selection-start-column="3" selection-end-line="0" selection-end-column="3" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AccountsMerge.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/facebook/AccountsMerge.py">
+      <file leaf-file-name="BinarySearchNotes.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Array/BinarySearchNotes.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-904">
-              <caret line="49" column="24" lean-forward="true" selection-start-line="49" selection-start-column="24" selection-end-line="49" selection-end-column="24" />
+            <state relative-caret-position="68">
+              <caret line="4" column="108" lean-forward="false" selection-start-line="4" selection-start-column="108" selection-end-line="4" selection-end-column="108" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Read N Characters Given Read4.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/facebook/Read N Characters Given Read4.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="555">
-              <caret line="38" column="0" lean-forward="true" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Array.iml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Array/Array.iml">
+      <file leaf-file-name="3Sum Smaller.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Google/3Sum Smaller.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -103,23 +98,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Max Points on a Line.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Linkedin/Max Points on a Line.py">
+      <file leaf-file-name="Guess Number Higher or Lower II.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Google/Guess Number Higher or Lower II.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="73" selection-end-column="26" />
-              <folding>
-                <element signature="e#531#566#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="685">
+              <caret line="50" column="23" lean-forward="true" selection-start-line="50" selection-start-column="23" selection-end-line="50" selection-end-column="23" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="fractions.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/anaconda3/envs/tensorflow/lib/python3.5/fractions.py">
+      <file leaf-file-name="Guess Number Higher or Lower.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Google/Guess Number Higher or Lower.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="241">
-              <caret line="59" column="6" lean-forward="false" selection-start-line="59" selection-start-column="6" selection-end-line="59" selection-end-column="6" />
+            <state relative-caret-position="493">
+              <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CombinationSumIII.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Array/CombinationSumIII.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -157,21 +160,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/facebook/MeetingRooms.py" />
-        <option value="$PROJECT_DIR$/facebook/FirstBadVersion.py" />
-        <option value="$PROJECT_DIR$/facebook/ContinuousSubarraySum.py" />
-        <option value="$PROJECT_DIR$/facebook/ValidParentheses.py" />
-        <option value="$PROJECT_DIR$/facebook/Convert Binary SearchTreetoSortedDoublyLinkedList.py" />
-        <option value="$PROJECT_DIR$/facebook/MaximumSizeSubarraySumEqualsk.py" />
-        <option value="$PROJECT_DIR$/facebook/BasicCalculatorII.py" />
-        <option value="$PROJECT_DIR$/facebook/AddStrings.py" />
-        <option value="$PROJECT_DIR$/facebook/CustomSortString.py" />
-        <option value="$PROJECT_DIR$/facebook/FriendsOfAppropriateAges.py" />
-        <option value="$PROJECT_DIR$/facebook/AccountsMerge.py" />
-        <option value="$PROJECT_DIR$/facebook/BinaryTreeVerticalOrderTraversal.py" />
-        <option value="$PROJECT_DIR$/facebook/LargestRectangleinHistogram.py" />
-        <option value="$PROJECT_DIR$/facebook/Maximal Rectangle.py" />
-        <option value="$PROJECT_DIR$/facebook/BasicCalculatorIII.py" />
         <option value="$PROJECT_DIR$/facebook/Serialize and Deserialize Binary Tree.py" />
         <option value="$PROJECT_DIR$/facebook/LetterCombinationsofaPhoneNumber.py" />
         <option value="$PROJECT_DIR$/Amazon/SetMatrixZeroes.py" />
@@ -208,6 +196,21 @@
         <option value="$PROJECT_DIR$/LinkedList/Design Phone Directory.py" />
         <option value="$PROJECT_DIR$/facebook/Read N Characters Given Read4.py" />
         <option value="$PROJECT_DIR$/Linkedin/Max Points on a Line.py" />
+        <option value="$PROJECT_DIR$/facebook/RegularExpressionMatching.py" />
+        <option value="$PROJECT_DIR$/facebook/Task Scheduler.py" />
+        <option value="$PROJECT_DIR$/facebook/Maximum Sum of 3 Non-Overlapping Subarrays.py" />
+        <option value="$PROJECT_DIR$/facebook/Substring with Concatenation of All Words.py" />
+        <option value="$PROJECT_DIR$/Array/FirstK.py" />
+        <option value="$PROJECT_DIR$/facebook/Word Break II.py" />
+        <option value="$PROJECT_DIR$/facebook/Closest Binary Search Tree Value.py" />
+        <option value="$PROJECT_DIR$/facebook/Robot Room Cleaner.py" />
+        <option value="$PROJECT_DIR$/facebook/Walls and Gates.py" />
+        <option value="$PROJECT_DIR$/facebook/Shortest Subarray with Sum at Least K.py" />
+        <option value="$PROJECT_DIR$/facebook/Find K Closest Elements.py" />
+        <option value="$PROJECT_DIR$/facebook/SearchinRotatedSortedArray.py" />
+        <option value="$PROJECT_DIR$/Google/Guess Number Higher or Lower.py" />
+        <option value="$PROJECT_DIR$/Array/BinarySearchNotes.py" />
+        <option value="$PROJECT_DIR$/Google/Guess Number Higher or Lower II.py" />
       </list>
     </option>
   </component>
@@ -233,8 +236,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -242,6 +246,21 @@
             <path>
               <item name="LeetCodes" type="b2602c69:ProjectViewProjectNode" />
               <item name="LeetCodes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LeetCodes" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LeetCodes" type="462c0819:PsiDirectoryNode" />
+              <item name="Array" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LeetCodes" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LeetCodes" type="462c0819:PsiDirectoryNode" />
+              <item name="facebook" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LeetCodes" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LeetCodes" type="462c0819:PsiDirectoryNode" />
+              <item name="Google" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="LeetCodes" type="b2602c69:ProjectViewProjectNode" />
@@ -263,26 +282,10 @@
               <item name="LeetCodes" type="462c0819:PsiDirectoryNode" />
               <item name="microsoft" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="LeetCodes" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
-            <path>
-              <item name="LeetCodes" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Python 3.5.4 (~/anaconda3/envs/tensorflow/bin/python3.5) &gt;" type="70bed36:NamedLibraryElementNode" />
-            </path>
-            <path>
-              <item name="LeetCodes" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Python 3.5.4 (~/anaconda3/envs/tensorflow/bin/python3.5) &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="python3.5" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -290,7 +293,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15332031" />
     <property name="project.structure.side.proportion" value="0.30103806" />
-    <property name="SearchEverywhereHistoryKey" value="merge&#9;null&#9;null&#10;sky&#9;FILE&#9;file:///Users/tianwenchu/Desktop/ResearchRepos/LeetCodes/LeetCodes/facebook/TheSkylineProblem.py&#10;encode&#9;null&#9;null&#10;Count&#9;null&#9;null&#10;Roman&#9;null&#9;null&#10;move&#9;FILE&#9;file:///Users/tianwenchu/Desktop/ResearchRepos/LeetCodes/LeetCodes/facebook/MoveZeroes.py&#10;movez&#9;null&#9;null&#10;Three&#9;null&#9;null&#10;Maximal Square&#9;FILE&#9;file:///Users/tianwenchu/Desktop/ResearchRepos/LeetCodes/LeetCodes/Google/MaximalSquare.py&#10;anagrams&#9;null&#9;null&#10;game of &#9;FILE&#9;file:///Users/tianwenchu/Desktop/ResearchRepos/LeetCodes/LeetCodes/Google/Game of Life.py&#10;post&#9;FILE&#9;file:///Users/tianwenchu/Desktop/ResearchRepos/LeetCodes/LeetCodes/Trees/Construct BinaryTreefromInorderandPostorderTraversal.py&#10;basic&#9;FILE&#9;file:///Users/tianwenchu/Desktop/ResearchRepos/LeetCodes/LeetCodes/facebook/BasicCalculatorIII.py&#10;valid&#9;FILE&#9;file:///Users/tianwenchu/Desktop/ResearchRepos/LeetCodes/LeetCodes/facebook/ValidParentheses.py&#10;palin&#9;null&#9;null&#10;BinaryTreeInorder&#9;null&#9;null&#10;inorder&#9;FILE&#9;file:///Users/tianwenchu/Desktop/ResearchRepos/LeetCodes/LeetCodes/Trees/Construct BinaryTreefromInorderandPostorderTraversal.py&#10;BinaryTreeIn&#9;null&#9;null&#10;Pow(x, n)&#9;null&#9;null" />
+    <property name="SearchEverywhereHistoryKey" value="rotated&#9;FILE&#9;file:///Users/tianwenchu/Desktop/ResearchRepos/LeetCodes/LeetCodes/facebook/SearchinRotatedSortedArray.py&#10;regular&#9;null&#9;null&#10;merge&#9;null&#9;null&#10;sky&#9;FILE&#9;file:///Users/tianwenchu/Desktop/ResearchRepos/LeetCodes/LeetCodes/facebook/TheSkylineProblem.py&#10;encode&#9;null&#9;null&#10;Count&#9;null&#9;null&#10;Roman&#9;null&#9;null&#10;move&#9;FILE&#9;file:///Users/tianwenchu/Desktop/ResearchRepos/LeetCodes/LeetCodes/facebook/MoveZeroes.py&#10;movez&#9;null&#9;null&#10;Three&#9;null&#9;null&#10;Maximal Square&#9;FILE&#9;file:///Users/tianwenchu/Desktop/ResearchRepos/LeetCodes/LeetCodes/Google/MaximalSquare.py&#10;anagrams&#9;null&#9;null&#10;game of &#9;FILE&#9;file:///Users/tianwenchu/Desktop/ResearchRepos/LeetCodes/LeetCodes/Google/Game of Life.py&#10;post&#9;FILE&#9;file:///Users/tianwenchu/Desktop/ResearchRepos/LeetCodes/LeetCodes/Trees/Construct BinaryTreefromInorderandPostorderTraversal.py&#10;basic&#9;FILE&#9;file:///Users/tianwenchu/Desktop/ResearchRepos/LeetCodes/LeetCodes/facebook/BasicCalculatorIII.py&#10;valid&#9;FILE&#9;file:///Users/tianwenchu/Desktop/ResearchRepos/LeetCodes/LeetCodes/facebook/ValidParentheses.py&#10;palin&#9;null&#9;null&#10;BinaryTreeInorder&#9;null&#9;null&#10;inorder&#9;FILE&#9;file:///Users/tianwenchu/Desktop/ResearchRepos/LeetCodes/LeetCodes/Trees/Construct BinaryTreefromInorderandPostorderTraversal.py&#10;BinaryTreeIn&#9;null&#9;null&#10;Pow(x, n)&#9;null&#9;null" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -304,25 +307,25 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Plus One Linked List">
-    <configuration name="ListProblemSummary" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.Guess Number Higher or Lower II">
+    <configuration name="BinarySearchNotes" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/LinkedList" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Array" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="LeetCodes" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/LinkedList/ListProblemSummary.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Array/BinarySearchNotes.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <configuration name="Merge Two Sorted Interval Lists" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="Find K Closest Elements" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -334,12 +337,12 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="LeetCodes" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/facebook/Merge Two Sorted Interval Lists.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/facebook/Find K Closest Elements.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <configuration name="Plus One Linked List" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="Guess Number Higher or Lower II" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -351,12 +354,12 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="LeetCodes" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Google/Plus One Linked List.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Google/Guess Number Higher or Lower II.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <configuration name="Pow(x, n)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="Shortest Subarray with Sum at Least K" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -368,12 +371,12 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="LeetCodes" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/facebook/Pow(x, n).py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/facebook/Shortest Subarray with Sum at Least K.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <configuration name="Reverse Nodes in k-Group" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="Word Break II" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -385,7 +388,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="LeetCodes" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/facebook/Reverse Nodes in k-Group.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/facebook/Word Break II.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -472,19 +475,19 @@
       <listeners />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.Pow(x, n)" />
-      <item index="1" class="java.lang.String" itemvalue="Python.Merge Two Sorted Interval Lists" />
-      <item index="2" class="java.lang.String" itemvalue="Python.Reverse Nodes in k-Group" />
-      <item index="3" class="java.lang.String" itemvalue="Python.ListProblemSummary" />
-      <item index="4" class="java.lang.String" itemvalue="Python.Plus One Linked List" />
+      <item index="0" class="java.lang.String" itemvalue="Python.Word Break II" />
+      <item index="1" class="java.lang.String" itemvalue="Python.Shortest Subarray with Sum at Least K" />
+      <item index="2" class="java.lang.String" itemvalue="Python.Find K Closest Elements" />
+      <item index="3" class="java.lang.String" itemvalue="Python.BinarySearchNotes" />
+      <item index="4" class="java.lang.String" itemvalue="Python.Guess Number Higher or Lower II" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.Plus One Linked List" />
-        <item index="1" class="java.lang.String" itemvalue="Python.ListProblemSummary" />
-        <item index="2" class="java.lang.String" itemvalue="Python.Reverse Nodes in k-Group" />
-        <item index="3" class="java.lang.String" itemvalue="Python.Merge Two Sorted Interval Lists" />
-        <item index="4" class="java.lang.String" itemvalue="Python.Pow(x, n)" />
+        <item index="0" class="java.lang.String" itemvalue="Python.Guess Number Higher or Lower II" />
+        <item index="1" class="java.lang.String" itemvalue="Python.BinarySearchNotes" />
+        <item index="2" class="java.lang.String" itemvalue="Python.Find K Closest Elements" />
+        <item index="3" class="java.lang.String" itemvalue="Python.Shortest Subarray with Sum at Least K" />
+        <item index="4" class="java.lang.String" itemvalue="Python.Word Break II" />
       </list>
     </recent_temporary>
   </component>
@@ -529,12 +532,13 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4056967" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20092379" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287144" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5625824" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19062749" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10166799" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32948422" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -548,7 +552,6 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32948422" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -602,148 +605,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/facebook/WordLadder.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="27" column="14" lean-forward="false" selection-start-line="27" selection-start-column="11" selection-end-line="27" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/facebook/WordLadderII.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="47" column="11" lean-forward="true" selection-start-line="47" selection-start-column="11" selection-end-line="47" selection-end-column="11" />
-          <folding>
-            <element signature="e#969#1011#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/facebook/MoveZeroes.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="24" lean-forward="true" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Strings/RomantoInteger.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="29" lean-forward="true" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/facebook/Missing Number.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="44" lean-forward="true" selection-start-line="22" selection-start-column="44" selection-end-line="22" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/facebook/Best Time to Buy and Sell Stock.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="35" column="21" lean-forward="false" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/facebook/LowestCommonAncestorOfBinaryTree.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="36" column="24" lean-forward="true" selection-start-line="36" selection-start-column="24" selection-end-line="36" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/facebook/CountandSay.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
-          <caret line="47" column="16" lean-forward="true" selection-start-line="47" selection-start-column="16" selection-end-line="47" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/facebook/Remove Duplicates from Sorted Array.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="740">
-          <caret line="48" column="26" lean-forward="true" selection-start-line="48" selection-start-column="26" selection-end-line="48" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/facebook/Add Binary.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="16" lean-forward="true" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/facebook/ValidPalindromeII.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="32" column="10" lean-forward="false" selection-start-line="32" selection-start-column="10" selection-end-line="32" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/facebook/Verify PreorderSequenceinBinarySearchTree.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/facebook/ValidParentheses.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="833">
-          <caret line="49" column="0" lean-forward="true" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/facebook/PalindromicSubstrings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="24" lean-forward="false" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/facebook/Palindrome Linked List.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="44" lean-forward="false" selection-start-line="12" selection-start-column="44" selection-end-line="12" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/facebook/ExcelSheetColumnTitle.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/facebook/ExcelSheetColumnNumber.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="731">
-          <caret line="43" column="18" lean-forward="true" selection-start-line="43" selection-start-column="18" selection-end-line="43" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Google/EncodeandDecodeTinyURL.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="655">
           <caret line="67" column="19" lean-forward="true" selection-start-line="67" selection-start-column="19" selection-end-line="67" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -751,7 +616,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="590">
           <caret line="70" column="30" lean-forward="true" selection-start-line="70" selection-start-column="30" selection-end-line="70" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -759,7 +623,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="298">
           <caret line="25" column="22" lean-forward="true" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -767,7 +630,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
           <caret line="25" column="39" lean-forward="true" selection-start-line="25" selection-start-column="39" selection-end-line="25" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -775,7 +637,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -783,7 +644,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="16" lean-forward="true" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -791,15 +651,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="680">
           <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/facebook/SearchinRotatedSortedArray.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="3" lean-forward="true" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="3" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -807,7 +658,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -815,7 +665,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="918">
           <caret line="54" column="0" lean-forward="false" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -823,7 +672,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1139">
           <caret line="69" column="32" lean-forward="false" selection-start-line="69" selection-start-column="32" selection-end-line="69" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -839,7 +687,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="555">
           <caret line="54" column="28" lean-forward="false" selection-start-line="54" selection-start-column="28" selection-end-line="54" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -847,7 +694,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="657">
           <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -855,7 +701,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="6" lean-forward="true" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -863,7 +708,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="3" lean-forward="true" selection-start-line="0" selection-start-column="3" selection-end-line="0" selection-end-column="3" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -871,7 +715,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="524">
           <caret line="55" column="25" lean-forward="true" selection-start-line="55" selection-start-column="25" selection-end-line="55" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -879,7 +722,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="3" lean-forward="true" selection-start-line="0" selection-start-column="3" selection-end-line="0" selection-end-column="3" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -895,7 +737,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="708">
           <caret line="54" column="17" lean-forward="false" selection-start-line="54" selection-start-column="17" selection-end-line="54" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -903,7 +744,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-6">
           <caret line="32" column="31" lean-forward="false" selection-start-line="32" selection-start-column="31" selection-end-line="32" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -911,7 +751,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="867">
           <caret line="51" column="37" lean-forward="false" selection-start-line="51" selection-start-column="37" selection-end-line="51" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -919,7 +758,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -927,55 +765,79 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="73">
           <caret line="27" column="28" lean-forward="true" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Google/Plus One Linked List.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="371">
+        <state relative-caret-position="527">
           <caret line="31" column="23" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="57" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/microsoft/Odd Even Linked List.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="46" column="17" lean-forward="true" selection-start-line="46" selection-start-column="17" selection-end-line="46" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/LinkedList/Middle of the Linked List.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="37" column="11" lean-forward="true" selection-start-line="37" selection-start-column="11" selection-end-line="37" selection-end-column="11" />
-          <folding />
+        <state relative-caret-position="629">
+          <caret line="37" column="11" lean-forward="false" selection-start-line="37" selection-start-column="11" selection-end-line="37" selection-end-column="11" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/LinkedList/Design Phone Directory.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="53" column="77" lean-forward="true" selection-start-line="53" selection-start-column="77" selection-end-line="53" selection-end-column="77" />
+        <state relative-caret-position="901">
+          <caret line="53" column="77" lean-forward="false" selection-start-line="53" selection-start-column="77" selection-end-line="53" selection-end-column="77" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/facebook/AccountsMerge.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-904">
-          <caret line="49" column="24" lean-forward="true" selection-start-line="49" selection-start-column="24" selection-end-line="49" selection-end-column="24" />
+        <state relative-caret-position="833">
+          <caret line="49" column="24" lean-forward="false" selection-start-line="49" selection-start-column="24" selection-end-line="49" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/facebook/Read N Characters Given Read4.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="38" column="0" lean-forward="true" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+        <state relative-caret-position="646">
+          <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LinkedList/ListProblemSummary.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1734">
+          <caret line="102" column="30" lean-forward="false" selection-start-line="102" selection-start-column="30" selection-end-line="102" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda3/envs/tensorflow/lib/python3.5/fractions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="918">
+          <caret line="59" column="6" lean-forward="false" selection-start-line="59" selection-start-column="6" selection-end-line="59" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/facebook/RegularExpressionMatching.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Linkedin/Max Points on a Line.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-517">
+          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding>
+            <element signature="e#531#566#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -987,29 +849,147 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/LinkedList/ListProblemSummary.py">
+    <entry file="file://$PROJECT_DIR$/microsoft/Odd Even Linked List.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1726">
-          <caret line="102" column="30" lean-forward="true" selection-start-line="102" selection-start-column="30" selection-end-line="102" selection-end-column="30" />
+        <state relative-caret-position="782">
+          <caret line="46" column="17" lean-forward="false" selection-start-line="46" selection-start-column="17" selection-end-line="46" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/anaconda3/envs/tensorflow/lib/python3.5/fractions.py">
+    <entry file="file://$PROJECT_DIR$/facebook/Task Scheduler.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="59" column="6" lean-forward="false" selection-start-line="59" selection-start-column="6" selection-end-line="59" selection-end-column="6" />
+        <state relative-caret-position="578">
+          <caret line="34" column="0" lean-forward="true" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Linkedin/Max Points on a Line.py">
+    <entry file="file://$USER_HOME$/Library/Caches/IdeaIC2017.2/python_stubs/-2113174007/builtins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="337">
+          <caret line="203" column="4" lean-forward="false" selection-start-line="203" selection-start-column="4" selection-end-line="203" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/facebook/Substring with Concatenation of All Words.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="770">
+          <caret line="48" column="69" lean-forward="true" selection-start-line="48" selection-start-column="69" selection-end-line="48" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/facebook/Maximum Sum of 3 Non-Overlapping Subarrays.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="804">
+          <caret line="58" column="17" lean-forward="true" selection-start-line="58" selection-start-column="17" selection-end-line="58" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Array/FirstK.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="799">
+          <caret line="47" column="40" lean-forward="true" selection-start-line="47" selection-start-column="40" selection-end-line="47" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Array/CombinationSumIII.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="73" selection-end-column="26" />
-          <folding>
-            <element signature="e#531#566#0" expanded="true" />
-          </folding>
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Google/Guess Number Higher or Lower.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/facebook/Robot Room Cleaner.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="787">
+          <caret line="108" column="0" lean-forward="true" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/facebook/Word Break II.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="39" column="15" lean-forward="true" selection-start-line="39" selection-start-column="15" selection-end-line="39" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/facebook/Closest Binary Search Tree Value.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="57" column="0" lean-forward="true" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/facebook/Walls and Gates.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="38" column="87" lean-forward="false" selection-start-line="38" selection-start-column="87" selection-end-line="38" selection-end-column="87" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/facebook/Shortest Subarray with Sum at Least K.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="44" column="90" lean-forward="true" selection-start-line="44" selection-start-column="90" selection-end-line="44" selection-end-column="90" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/facebook/Find K Closest Elements.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="23" lean-forward="true" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/facebook/SearchinRotatedSortedArray.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="3" lean-forward="true" selection-start-line="0" selection-start-column="3" selection-end-line="0" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Array/BinarySearchNotes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="108" lean-forward="false" selection-start-line="4" selection-start-column="108" selection-end-line="4" selection-end-column="108" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Google/3Sum Smaller.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Google/Guess Number Higher or Lower II.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="685">
+          <caret line="50" column="23" lean-forward="true" selection-start-line="50" selection-start-column="23" selection-end-line="50" selection-end-column="23" />
+          <folding />
         </state>
       </provider>
     </entry>

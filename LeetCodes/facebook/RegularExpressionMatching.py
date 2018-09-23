@@ -64,3 +64,5 @@ class Solution(object):
 		else:
 			return first_match and self.isMatch(s[1:], p[1:])
 
+res = Solution().isMatch("", ".*")
+print(res)

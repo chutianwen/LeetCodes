@@ -34,6 +34,7 @@ class Solution:
 			if target == nums[mid]:
 				return mid
 
+			# decide where is the rotation part
 			if nums[low] <= nums[mid]:
 				if nums[low] <= target < nums[mid]:
 					high = mid - 1
