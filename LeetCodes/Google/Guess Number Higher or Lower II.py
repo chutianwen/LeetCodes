@@ -62,4 +62,28 @@ class Solution(object):
 				break
 
 
-Solution().getMoneyAmount(3)
+	def getMoneyAmountDP(self, n):
+		'''
+		For n = 4, we have dp array like below, only focus on assigning upper triangle
+		We fill upper triangle from bottom to top, starting from (3, 4), then (2,3), (2,4), (1,2), (1,3), (1,4)
+		O(n ^ 3)
+			 0	 1  2  3  4
+		0	[- , -, -, -, -]
+		1	[- , 0, 0, 0, 0]
+		2	[- , 0, 0, 0, 0]
+		3	[- , 0, 0, 0, 0]
+		4	[- , 0, 0, 0, 0]
+
+		:param n:
+		:return:
+		'''
+		cache = [[0 for _ in range(n + 1)] for _ in range(n + 1)]
+		for lo in range(n - 1, 0, -1):
+			for hi in range(lo + 1, n + 1):
+				cache[lo][hi] = float('inf')
+				for pivot in range(lo, hi):
+					cache[lo][hi] = min(cache[lo][hi], pivot + max(cache[lo][pivot - 1], cache[pivot + 1][hi]))
+		return cache[1][n]
+
+# print(Solution().getMoneyAmount(3))
+print(Solution().getMoneyAmountDP(3))

@@ -50,8 +50,8 @@ class BinarySearchNote:
 		# in this case, since at the termination loop, if input[lo] <= target < input[mid] always failed, so we cannot compare mid with target,
 		return hi
 
-input = [1,2,5,6,7,8,9,11]
-print(BinarySearchNote().binary_search(input, 10))
+input = [1,2,4,5]
+print(BinarySearchNote().binary_search(input, 55))
 
 input = [5,6,8,9,12,1,2,4]
 print(BinarySearchNote().binary_search_rotated(input, 7))
