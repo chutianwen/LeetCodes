@@ -40,10 +40,8 @@ class LRUCache(object):
 		"""
 		self.capacity = capacity
 		self.map = dict()
-		self.head = CacheNode(0, 0)
-		self.tail = CacheNode(0, 0)
-		self.head.next = self.tail
-		self.tail.pre = self.head
+		self.head, self.tail = [CacheNode(0, 0)] * 2
+		self.head.next, self.tail.pre = self.tail, self.head
 
 	def get(self, key):
 		"""
@@ -76,23 +74,11 @@ class LRUCache(object):
 		self.add(node)
 
 	def remove(self, node):
-		pre = node.pre
-		next = node.next
-		pre.next = next
-		next.pre = pre
-
+		node.pre.next, node.next.pre = node.next, node.pre
 
 	def add(self, node):
-		ori = self.head.next
-		self.head.next = node
-		node.pre = self.head
-		node.next = ori
-		ori.pre = node
+		self.head.next.pre, self.head.next, node.pre, node.next = node, node, self.head, self.head.next
 
-		# Your LRUCache object will be instantiated and called as such:
-		# obj = LRUCache(capacity)
-		# param_1 = obj.get(key)
-		# obj.put(key,value)
 
 cache = LRUCache(1)
 cache.put(2, 1)

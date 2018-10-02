@@ -46,18 +46,14 @@ class Solution:
 		:type wordList: List[str]
 		:rtype: List[List[str]]
 		"""
-		res = []
 		ref = set(wordList)
 
-		explored = set()
 		word_path = defaultdict(list)
-		word_path[beginWord] = [[beginWord]]
-		frontier = deque([beginWord])
+		frontier = deque()
+		frontier.append((beginWord, [[]]))
 
 		while frontier:
-			word_expand = frontier.popleft()
-
-			explored.add(word_expand)
+			word_expand, parent_paths = frontier.popleft()
 
 			for idx, letter in enumerate(word_expand):
 				for new_c in ascii_lowercase:
@@ -65,23 +61,64 @@ class Solution:
 						continue
 					else:
 						new_word = word_expand[: idx] + new_c + word_expand[idx + 1:]
-						if new_word in ref and new_word not in explored:
+						if new_word in ref and new_word:
+							if new_word in word_path:
+								for path in parent_paths:
+									new_path = path + [new_word]
+									if len(new_path) == word_path[new_word][-1]:
+										word_path[new_word].append(new_path)
+									else:
+										break
+							else:
+								new_paths = map(lambda path: path + [new_word], parent_paths)
+								frontier.append([new_word, new_paths])
+								word_path[new_word].append(new_paths)
 
-							if new_word not in frontier:
+		return word_path[endWord]
+
+class Solution1:
+	def findLadders(self, beginWord, endWord, wordList):
+		"""
+		:type beginWord: str
+		:type endWord: str
+		:type wordList: List[str]
+		:rtype: List[List[str]]
+		"""
+		ref = set(wordList)
+
+		word_path = defaultdict(list)
+		word_path[beginWord] = [[beginWord]]
+		frontier = deque([beginWord])
+
+		while frontier:
+			word_expand = frontier.popleft()
+			parent_path = word_path[word_expand]
+
+			for idx, letter in enumerate(word_expand):
+				for new_c in ascii_lowercase:
+					if new_c == letter:
+						continue
+					else:
+						new_word = word_expand[: idx] + new_c + word_expand[idx + 1:]
+						if new_word in ref:
+							if new_word not in word_path:
 								frontier.append(new_word)
 
-							for path in map(lambda path_parent: path_parent + [new_word], word_path[word_expand]):
-								if not word_path[new_word] or len(word_path[new_word][-1]) == len(path):
-									word_path[new_word].append(path)
+							# since no matter when we reach the same node, the action space is still same, we can simply iterate parent path
+							for path in parent_path:
+								path_cur = path + [new_word]
+
+								if new_word not in word_path or len(word_path[new_word][-1]) == len(path_cur):
+									word_path[new_word].append(path_cur)
 								else:
 									break
 
 		return word_path[endWord]
 
 
-beginWord = "red"
-endWord = "tax"
-wordList = ["ted","tex","red","tax","tad","den","rex","pee"]
+beginWord = "a"
+endWord = "c"
+wordList = ["a", "c"]
 
 # beginWord = "hit"
 # endWord = "cog"

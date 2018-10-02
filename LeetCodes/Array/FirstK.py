@@ -50,3 +50,6 @@ print(res)
 
 res = Solution().first_large_k(input, 6)
 print(res)
+
+from collections import Counter
+Counter().most_common()

@@ -101,9 +101,37 @@ class Solution(object):
                         q.append(id)
         return False
 
+
+class Solution2(object):
+    def wordBreak(self, s, wordDict):
+        """
+        :type s: str
+        :type wordDict: List[str]
+        :rtype: bool
+        """
+        if not s or len(s):
+            return False
+
+        word_dict_trim = set(filter(lambda word: word in s, wordDict))
+        print(word_dict_trim)
+        frontier = [""]
+        explored = set()
+        while frontier:
+            expand = frontier.pop()
+            print(expand)
+            for word in wordDict:
+                future = expand + word
+                if future == s:
+                    return True
+                elif len(future) < len(s) and s.startswith(future) and future not in explored:
+                    frontier.append(future)
+                    explored.add(future)
+        return False
+
+
 # s = "bb"
 # dict = ["a", "b", "bbb", "bbbb"]
 s = "leetcode"
 dict = ['leet', 'code']
-res = Solution().word_break_bfs(s, dict)
+res = Solution2().wordBreak(s, dict)
 print(res)

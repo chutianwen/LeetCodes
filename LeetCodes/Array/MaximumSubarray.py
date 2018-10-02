@@ -30,6 +30,7 @@ class maxSubArray(object):
             return 0
         sum_cur = sum_max = nums[0]
         for num in nums[1:]:
+            # current max potentially can be obtained from two ways, 1. combine previous part and current num, 2. just keep current num
             sum_cur = max(sum_cur + num, num)
             sum_max = max(sum_cur, sum_max)
         return sum_max
