@@ -24,22 +24,33 @@ The input is two lists: the subroutines called and their arguments. Solution's c
 
 
 '''
-
 class Solution(object):
 
 	def __init__(self, w):
 		"""
 		:type w: List[int]
 		"""
-
+		self.pool = []
+		pre = 0
+		for weight in w:
+			self.pool.append(pre + weight)
+			pre = self.pool[-1]
 
 	def pickIndex(self):
 		"""
 		:rtype: int
 		"""
+		if not self.pool:
+			return -1
+		print(self.pool)
+		import random
+		from bisect import bisect_left
+		choice = random.uniform(0, self.pool[-1])
+		print(choice)
+		result = bisect_left(self.pool, choice)
+		return result
 
-
-
-		# Your Solution object will be instantiated and called as such:
-		# obj = Solution(w)
-		# param_1 = obj.pickIndex()
+# Your Solution object will be instantiated and called as such:
+obj = Solution([1, 3])
+param_1 = obj.pickIndex()
+print(param_1)

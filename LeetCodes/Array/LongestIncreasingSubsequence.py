@@ -37,5 +37,26 @@ class Solution(object):
         print(dp)
         return max_v
 
-res = Solution().lengthOfLIS([2, 7, 1, 6, 8, 3, 11])
+class Solution2(object):
+    def lengthOfLIS(self, nums):
+        if not nums or len(nums) == 0:
+            return 0
+
+        from bisect import bisect_left
+        cache = [nums[0]]
+        max_length = 1
+        for num in nums[1:]:
+            pos = bisect_left(cache, num)
+            print(num, pos, cache)
+            if pos == len(cache):
+                cache.append(num)
+            else:
+                cache[pos] = num
+            max_length = max(max_length, pos + 1)
+        return max_length
+
+
+
+
+res = Solution2().lengthOfLIS([11,12,13,14,15,6,7,8,101,18])
 print(res)
