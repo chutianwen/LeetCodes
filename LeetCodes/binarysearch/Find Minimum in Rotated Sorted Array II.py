@@ -49,6 +49,7 @@ class Solution:
 				hi = mid - 1
 			elif nums[mid] > nums[hi]:
 				lo = mid + 1
+			# the target can be on left of mid or right of mid, so lo += 1 is the only way to shrink space
 			elif lo != hi and nums[lo] == nums[hi]:
 				lo += 1
 			else:

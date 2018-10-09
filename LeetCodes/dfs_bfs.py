@@ -81,15 +81,20 @@ def dfs_paths(graph, start, end):
                 stack.append((next, path + [next]))
 
 
+
 if __name__ == "__main__":
-    parents = dict()
-    parents = {'N1': ['N2', 'N3', 'N4'], 'N3': ['N6', 'N7'], 'N4': ['N3'], 'N5': ['N4', 'N8'], 'N6': ['N13'],
+    graph = dict()
+    graph = {'N1': ['N2', 'N3', 'N4'], 'N3': ['N6', 'N7'], 'N4': ['N3'], 'N5': ['N4', 'N8'], 'N6': ['N13'],
                'N8': ['N9'], 'N9': ['N11'], 'N10': ['N7', 'N9'], 'N11': ['N14'], 'N12': ['N5']}
 
     print("Depth-first search:")
-    dist = DFS_dist_from_node('N1', parents)
+    dist = DFS_dist_from_node('N1', graph)
     print(dist)
 
     print("Breadth-first search:")
-    dist = BFS_dist_from_node('N1', parents)
+    dist = BFS_dist_from_node('N1', graph)
     print(dist)
+
+    print("DFS recursive version 1 search:")
+    res = dfs_find_target_recursive(graph=graph, node='N1', target='N9', explored=set())
+    print(res)

@@ -66,5 +66,6 @@ class Solution(object):
 				start_recur = explored[remainder]
 				return res + res_decimal[: start_recur] + "({})".format(res_decimal[start_recur:])
 
+
 res = Solution().fractionToDecimal(-11, -442)
 print(res)

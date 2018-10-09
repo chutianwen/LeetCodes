@@ -48,12 +48,16 @@ class Solution:
 		"""
 		ref = set(wordList)
 
-		word_path = defaultdict(list)
 		frontier = deque()
-		frontier.append((beginWord, [[]]))
+		frontier.append((beginWord, [beginWord]))
+
+		res = []
 
 		while frontier:
-			word_expand, parent_paths = frontier.popleft()
+			word_expand, path = frontier.popleft()
+			if word_expand == endWord:
+				if not res or len(res[-1]) == len(path):
+					res.append(path)
 
 			for idx, letter in enumerate(word_expand):
 				for new_c in ascii_lowercase:
@@ -61,20 +65,13 @@ class Solution:
 						continue
 					else:
 						new_word = word_expand[: idx] + new_c + word_expand[idx + 1:]
-						if new_word in ref and new_word:
-							if new_word in word_path:
-								for path in parent_paths:
-									new_path = path + [new_word]
-									if len(new_path) == word_path[new_word][-1]:
-										word_path[new_word].append(new_path)
-									else:
-										break
-							else:
-								new_paths = map(lambda path: path + [new_word], parent_paths)
-								frontier.append([new_word, new_paths])
-								word_path[new_word].append(new_paths)
+						if new_word in ref and new_word not in path:
+							path_future = path + [new_word]
 
-		return word_path[endWord]
+							if not res or res and len(path_future) <= len(res[-1]):
+								frontier.append((new_word, path_future))
+
+		return res
 
 class Solution1:
 	def findLadders(self, beginWord, endWord, wordList):
@@ -116,14 +113,15 @@ class Solution1:
 		return word_path[endWord]
 
 
-beginWord = "a"
-endWord = "c"
-wordList = ["a", "c"]
+beginWord = "hit"
+endWord = "cog"
+wordList = ["hot","dot","dog","lot","log","cog"]
 
 # beginWord = "hit"
 # endWord = "cog"
 # wordList = ["hot","dot","dog","lot","log"]
 
 res = Solution().findLadders(beginWord, endWord, wordList)
-print("!"*10)
+print("-"*20)
 print(res)
+#[['hit', 'hot', 'dot', 'dog', 'cog'], ['hit', 'hot', 'lot', 'log', 'cog']]

@@ -40,16 +40,9 @@ class Solution:
 		:type nums: List[int]
 		:rtype: int
 		"""
-		if not nums or len(nums) == 0:
-			return 0
-
-		idx_distinct = 0
-		pre = nums[0]
-		for num in nums[1:]:
-			if num == pre:
-				continue
-			else:
-				idx_distinct += 1
-				nums[idx_distinct] = num
-			pre = num
-		return idx_distinct + 1
+		cnt = 0
+		for num in nums:
+			if cnt == 0 or num != nums[cnt - 1]:
+				nums[cnt] = num
+				cnt += 1
+		return cnt

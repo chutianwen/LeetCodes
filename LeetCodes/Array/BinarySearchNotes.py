@@ -50,6 +50,8 @@ class BinarySearchNote:
 		# in this case, since at the termination loop, if input[lo] <= target < input[mid] always failed, so we cannot compare mid with target,
 		return hi
 
+
+
 input = [1,2,4,5]
 print(BinarySearchNote().binary_search(input, 55))
 

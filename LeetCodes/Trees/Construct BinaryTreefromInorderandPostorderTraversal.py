@@ -31,3 +31,4 @@ class Solution(object):
 inorder = [1, 2, 4, 6, 7, 8, 10, 11]
 postorder = [1, 2, 6, 4, 8, 11, 10, 7]
 res = Solution().buildTree(inorder, postorder)
+

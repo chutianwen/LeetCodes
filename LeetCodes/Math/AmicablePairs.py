@@ -48,5 +48,26 @@ class Solution:
 
 		return sum_cur if not is_prime else -1
 
-res = Solution().amicable_pairs(1000000)
+
+	def amicable_pairs_cache_faster(self, k):
+
+		cache = [1] * (k + 1)
+
+		for divider in range(2, k // 2 + 1):
+			counter_divider = 2
+			while divider * counter_divider <= k:
+				cache[divider * counter_divider] += divider
+				counter_divider += 1
+
+		res = []
+		for idx in range(2, k + 1):
+			sum_factor = cache[idx]
+			if sum_factor < idx:
+				if cache[sum_factor] == idx:
+					res.append((sum_factor, idx))
+		return res
+
+
+
+res = Solution().amicable_pairs_cache_faster(10000000)
 print(res)

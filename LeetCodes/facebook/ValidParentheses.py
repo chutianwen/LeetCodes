@@ -32,7 +32,7 @@ Output: true
 
 class Solution(object):
 
-	def isValid2(self, s):
+	def isValid(self, s):
 		"""
 		:type s: str
 		:rtype: bool
@@ -50,5 +50,15 @@ class Solution(object):
 
 		return len(stack) == 0
 
-res = Solution().isValid("(([[[[]]]))")
-print(res)
+import unittest
+class ValidParentheseTest(unittest.TestCase):
+
+	def setUp(self):
+		self.test_input = "()(){}{}{}[][]"
+
+	def test_example(self):
+		print(Solution().isValid(self.test_input))
+
+
+if __name__ == "__main__":
+	unittest.main()

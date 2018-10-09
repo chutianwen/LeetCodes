@@ -13,8 +13,6 @@ Note:
 
 Although the above answer is in lexicographical order, your answer could be in any order you want.
 '''
-
-
 class Solution(object):
 	def letterCombinations(self, digits):
 		"""
@@ -28,19 +26,35 @@ class Solution(object):
 
 		cur = pre = []
 
-		for letter in digits[::-1]:
+		for digit in digits:
 
 			cur = []
 			if pre:
-				for c in num_to_letter[letter]:
-					cur.extend(map(lambda x: c + x, pre))
+				for letter in num_to_letter[digit]:
+					cur.extend(map(lambda word: word + letter, pre))
 			else:
-				cur.extend(list(num_to_letter[letter]))
+				cur.extend(list(num_to_letter[digit]))
 
 			pre = cur
 
 		return cur
 
+class Solution2:
+	# @return a list of strings, [s1, s2]
+	def letterCombinations(self, digits):
+		from functools import reduce
+		if '' == digits: return []
+		kvmaps = {
+			'2': 'abc',
+			'3': 'def',
+			'4': 'ghi',
+			'5': 'jkl',
+			'6': 'mno',
+			'7': 'pqrs',
+			'8': 'tuv',
+			'9': 'wxyz'
+		}
+		return reduce(lambda acc, digit: [x + y for x in acc for y in kvmaps[digit]], digits, [''])
 
 res = Solution().letterCombinations("23")
 print(res)
