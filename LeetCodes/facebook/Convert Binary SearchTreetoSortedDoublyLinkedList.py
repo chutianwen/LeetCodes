@@ -59,4 +59,86 @@ class Solution(object):
 
 
 
+class Solution2(object):
+	def treeToDoublyList(self, root):
+		"""
+		:type root: Node
+		:rtype: Node
+		"""
+		def traverse(node):
+			if not node.left and not node.right:
+				return node, node
 
+			if node.left:
+				hl, tl = traverse(node.left)
+				tl.right, node.left = node, tl
+			else:
+				hl, tl = node, node
+
+			if node.right:
+				hr, tr = traverse(node.right)
+				hr.left, node.right = node, hr
+			else:
+				hr, tr = node, node
+			return hl, tr
+
+		if not root:
+			return None
+		hl, tr = traverse(root)
+		hl.left, tr.right = tr, hl
+		return hl
+
+
+class Solution3(object):
+	def treeToDoublyList(self, root):
+		"""
+		:type root: Node
+		:rtype: Node
+		"""
+		if root:
+			head, tail = self.helper(root)
+			return head
+		return None
+
+
+	def helper(self, root):
+		"""Idea: Construct a DLL for each subtree, then return the head and tail"""
+		head, tail = root, root
+		if root.left:
+			lh, lt = self.helper(root.left)
+			lt.right = root
+			root.left = lt
+			head = lh
+		if root.right:
+			rh, rt = self.helper(root.right)
+			rh.left = root
+			root.right = rh
+			tail = rt
+		head.left = tail
+		tail.right = head
+		return (head, tail)
+
+class SolutionBest(object):
+	def treeToDoublyList(self, root):
+		"""
+		:type root: Node
+		:rtype: Node
+		"""
+
+		def dfs(root):
+			head = tail = root
+			if root.left:
+				lh, lt = dfs(root.left)
+				head = lh
+				lt.right, root.left = root, lt
+
+			if root.right:
+				rh, rt = dfs(root.right)
+				tail = rt
+				root.right, rh.left = rh, root
+			return head, tail
+
+		if root:
+			head, tail = dfs(root)
+			head.left, tail.right = tail, head
+			return head

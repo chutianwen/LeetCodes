@@ -91,25 +91,27 @@ class Solution:
 
 		visited = set()
 		directions = [[-1, 0], [0, 1], [1, 0], [0, -1]]
+		visited.add((0, 0))
+		robot.clean()
 
-		def driver(robot, visited, coordinate, offset):
-
-			visited.add(coordinate)
-			robot.clean()
+		def driver(coordinate, offset):
 
 			for idx in range(4):
 				if idx > 0:
 					robot.turnRight()
 
-				delta_row, delta_col = directions[(idx + offset) % 4]
+				idx_direction = (idx + offset) % 4
+				delta_row, delta_col = directions[idx_direction]
 				new_coordinate = (coordinate[0] + delta_row, coordinate[1] + delta_col)
 				if new_coordinate not in visited and robot.move():
+					visited.add(new_coordinate)
 					# offset is the trick!!!
-					driver(robot, visited, new_coordinate, idx + offset)
+					robot.clean()
+					driver(new_coordinate, idx_direction)
 
 			robot.turnLeft()
-			robot.move()
-			robot.turnLeft()
-			robot.turnLeft()
+			if robot.move():
+				robot.turnLeft()
+				robot.turnLeft()
 
-		driver(robot, visited, (0, 0), 0)
+		driver((0, 0), 0)

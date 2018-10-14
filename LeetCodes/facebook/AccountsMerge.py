@@ -94,7 +94,7 @@ class Solution(object):
 		p2 = self.findSet(n2)
 
 		if p1.email == p2.email:
-			return False
+			return
 
 		if p1.rank >= p2.rank:
 			if p1.rank == p2.rank:
@@ -103,33 +103,30 @@ class Solution(object):
 		else:
 			p1.parent = p2
 
-		return True
-
 	def accountsMerge(self, accounts):
 
+		# email -> nodes
 		email_nodes = collections.defaultdict(self.EmailNode)
 
 		for account in accounts:
 			name = account[0]
 
 			start_node = None
-			for idx, email in enumerate(account[1:]):
+			for email in account[1:]:
 				if email not in email_nodes:
-					email_node = self.EmailNode(name, email)
-				else:
-					email_node = email_nodes[email]
+					email_nodes[email] = self.EmailNode(name, email)
+
+				email_node = email_nodes[email]
 
 				if start_node is None:
 					start_node = email_node
-
-				if idx == 0 or self.union(start_node, email_node):
-					email_nodes[email] = email_node
+				else:
+					self.union(start_node, email_node)
 
 		group_emails = collections.defaultdict(list)
-		for node in email_nodes.values():
-			email_group = self.findSet(node)
-
-			group_emails[email_group].append(node.email)
+		for email_node in email_nodes.values():
+			email_group = self.findSet(email_node)
+			group_emails[email_group].append(email_node.email)
 
 		return [[group.name] + sorted(emails) for group, emails in group_emails.items()]
 

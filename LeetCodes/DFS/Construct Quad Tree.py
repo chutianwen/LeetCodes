@@ -35,12 +35,9 @@ class Solution:
 					pre = grid[row][col]
 
 			# print(bot_left, top_right, pre, is_leaf)
-			if is_leaf:
-				if pre == "*":
-					return None
-				else:
-					return Node(pre, is_leaf, None, None, None, None)
-			else:
+			if is_leaf and pre != "*":
+				return Node(pre, is_leaf, None, None, None, None)
+			elif not is_leaf:
 
 				mid_row = top_right[0] + (bot_left[0] - top_right[0]) // 2
 				mid_col = bot_left[1] + (top_right[1] - bot_left[1]) // 2

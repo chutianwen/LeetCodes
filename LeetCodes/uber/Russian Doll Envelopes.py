@@ -19,12 +19,14 @@ class Solution:
 		tails = []
 		for w, h in sorted(envelopes, key = lambda env : (env[0], -env[1])):
 			pos = bisect_left(tails, h)
+			print(w, h, pos)
 			if pos == len(tails):
 				tails.append(h)
 			else:
 				tails[pos] = h
-			print(w, h, tails)
+
 		return len(tails)
 
-a = [[2,4],[6,4],[6,7],[2,3]]
+a = [[2,4],[2,5]]
 res = Solution().maxEnvelopes(a)
+print(res)
