@@ -1,5 +1,4 @@
 class QuickSelect:
-
 	def first_kth(self, nums, k):
 
 		print("First {}th is {}\n".format(k, self.quick_select(nums, 0, len(nums) - 1, k)))
@@ -16,7 +15,6 @@ class QuickSelect:
 				return self.quick_select(nums, lo, partition - 1, k)
 		elif lo == hi:
 			return nums[lo]
-
 
 	def partition(self, nums, lo, hi):
 
@@ -45,7 +43,6 @@ class QuickSelect:
 			self.quick_sort_partition(nums, lo, partition - 1)
 			self.quick_sort_partition(nums, partition + 1, hi)
 
-
 	def partition_with_pivot(self, nums, lo, hi, pivot):
 		p1, p2 = lo, hi
 
@@ -71,18 +68,15 @@ class QuickSelect:
 		# also only guarantee [0, p2) is <= pivot
 		return p2
 
-
 	def quick_sort(self, nums):
 		self.quick_sort_partition(nums, 0, len(nums) - 1)
 
-
 	def smaller_match_hi(self, nums_small, nums_large):
 
-		assert(len(nums_small) == len(nums_large))
+		assert (len(nums_small) == len(nums_large))
 
 		def driver(lo, hi):
 			if lo < hi:
-
 				# this is tricky, nums_small[hi] won't work in some cases
 				pivot = nums_small[(lo + hi) // 2]
 				partition = self.partition_with_pivot_v2(nums_large, lo, hi, pivot)
@@ -106,7 +100,7 @@ class QuickSelect:
 		:return: pivot
 		"""
 		left = start  # save for the counterpart's pivot
-		i = start+1
+		i = start + 1
 		while i <= end:
 			if A[i] < pivot:
 				left += 1
@@ -124,6 +118,7 @@ class QuickSelect:
 		# can only guarantee all pos [0, left) is <= pivot
 		return left
 
+
 test = [3, 1, 1, 3, 4]
 print(QuickSelect().partition_with_pivot_v2(test, 0, len(test) - 1, 5))
 print(test)
@@ -133,10 +128,10 @@ print(QuickSelect().partition_with_pivot(test, 0, len(test) - 1, 5))
 print(test)
 
 import random
+
 nums = [random.randint(1, 100) for _ in range(10)]
 # nums = [2,5,1,3,5,6,3,3]
 print(nums)
-
 
 QuickSelect().quick_sort(nums)
 print(nums)
@@ -158,3 +153,47 @@ QuickSelect().smaller_match_hi(nums_small, nums_large)
 print("After matching:")
 print("nums_small", nums_small)
 print("nums_large", nums_large)
+
+
+class Solution(object):
+	def quick_select(self, nums, lo, hi, k):
+
+		if lo < hi:
+			partition = self.partition(nums, lo, hi)
+			if partition == k - 1:
+				return nums[partition]
+			elif partition < k - 1:
+				return self.quick_select(nums, partition + 1, hi, k)
+			else:
+				return self.quick_select(nums, lo, partition - 1, k)
+		elif lo == hi:
+			return nums[lo]
+
+	def partition(self, nums, lo, hi):
+
+		pivot = nums[hi]
+
+		p1, p2 = lo, hi - 1
+		while p1 <= p2:
+
+			while p1 <= p2 and nums[p1] <= pivot:
+				p1 += 1
+
+			while p1 <= p2 and nums[p2] > pivot:
+				p2 -= 1
+
+			if p1 > p2:
+				break
+
+			nums[p1], nums[p2] = nums[p2], nums[p1]
+
+		nums[hi], nums[p1] = nums[p1], nums[hi]
+		return p1
+
+	def findKthLargest(self, nums, k):
+		"""
+		:type nums: List[int]
+		:type k: int
+		:rtype: int
+		"""
+		return self.quick_select(nums, 0, len(nums) - 1, k)

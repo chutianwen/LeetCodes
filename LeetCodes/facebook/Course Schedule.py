@@ -60,32 +60,61 @@ class Solution:
 		return True
 
 
-	def canFinishSet(self, numCourses, prerequisites):
+	def canFinishBetter(self, numCourses, prerequisites):
+		graph = [[] for _ in range(numCourses)]
+		visit = [0 for _ in range(numCourses)]
+		for x, y in prerequisites:
+			graph[x].append(y)
+
+		def dfs(i):
+			if visit[i] == -1:
+				return False
+			if visit[i] == 1:
+				return True
+			visit[i] = -1
+			for j in graph[i]:
+				if not dfs(j):
+					return False
+			visit[i] = 1
+			return True
+		for i in range(numCourses):
+			if not dfs(i):
+				return False
+		return True
+
+
+class Solution2:
+	def canFinish(self, numCourses, prerequisites):
 		"""
 		:type numCourses: int
 		:type prerequisites: List[List[int]]
 		:rtype: bool
 		"""
-
 		if not prerequisites or len(prerequisites) == 0:
 			return True
 
-		dependency = defaultdict(set)
-		children = defaultdict(set)
+		graph = defaultdict(list)
+		for course, parent in prerequisites:
+			graph[parent].append(course)
 
-		for child, parent in prerequisites:
-			for kid in children[child] | {child}:
-				children[parent].add(kid)
-				if parent in children[child]:
-					return False
+		explored = set()
+		for start in graph:
+			if start in explored:
+				continue
+			explored.add(start)
+			frontier = [(start, {start})]
+			while frontier:
+				expand, path = frontier.pop()
+				if expand in graph:
+					for kid in graph[expand]:
+						if kid in path:
+							return False
 
-			for grand_p in dependency[parent] | {parent}:
-				dependency[child].add(grand_p)
-				if child == grand_p:
-					return False
-				for kid in children[child]:
-					dependency[kid].add(grand_p)
-
+						if kid not in explored:
+							explored.add(kid)
+							path.add(kid)
+							frontier.append((kid, path))
+							path.remove(kid)
 		return True
 
 prerequisites = [[0,1],[0,2],[1,2]]

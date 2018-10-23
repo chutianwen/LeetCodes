@@ -63,6 +63,94 @@ class Solution(object):
 				return list(valid)
 			level = {s[:i] + s[i+1:] for s in level for i in range(len(s))}
 
-res = Solution().removeInvalidParentheses("()())()")
-for x in res:
-	print(res)
+	def removeInvalidParentheses3(self, s):
+		from collections import deque
+
+		def isvalid(s):
+			ctr = 0
+			for c in s:
+				if c == '(':
+					ctr += 1
+				elif c == ')':
+					ctr -= 1
+					if ctr < 0:
+						return False
+			return ctr == 0
+
+		frontier = deque([(s, 0)])
+		explored = set()
+		res = []
+		depth = -1
+		while frontier:
+			expand, depth_expand = frontier.popleft()
+			if depth != -1 and depth_expand > depth:
+				continue
+
+			if isvalid(expand):
+				if depth == -1:
+					depth = depth_expand
+				res.append(expand)
+			else:
+				for idx in range(len(expand)):
+					future = expand[:idx] + expand[idx + 1:]
+					if future not in explored:
+						explored.add(future)
+						frontier.append((future, depth_expand + 1))
+
+		return res
+
+	def helper(self, input, solution):
+		tmp = ""
+		start = 0
+		for idx in solution:
+			tmp += input[start:idx]
+			start = idx + 1
+		tmp += input[start:]
+		return tmp
+
+	def removeInvalidParenthesesWithSolution(self, s):
+		from collections import deque
+
+		def isvalid(s):
+			ctr = 0
+			for c in s:
+				if c == '(':
+					ctr += 1
+				elif c == ')':
+					ctr -= 1
+					if ctr < 0:
+						return False
+			return ctr == 0
+
+		frontier = deque([(s, [])])
+		explored = set()
+		res = []
+		depth = -1
+		while frontier:
+			expand, path = frontier.popleft()
+			if depth != -1 and len(path) > depth:
+				continue
+
+			if isvalid(expand):
+				if depth == -1:
+					depth = len(path)
+				tmp = []
+				for j, idx in enumerate(path):
+					offset = len(list(filter(lambda x: x <= idx, path[:j])))
+					tmp.append(offset + idx)
+				res.append((expand, tmp))
+			else:
+				for idx in range(len(expand)):
+					future = expand[:idx] + expand[idx + 1:]
+					if future not in explored:
+						explored.add(future)
+						frontier.append((future, path + [idx]))
+
+		return res
+
+input = ")((())((()(((()("
+res = Solution().removeInvalidParenthesesWithSolution(input)
+for valid_str, solution in res:
+	tmp = Solution().helper(input, solution)
+	print(valid_str, solution, "modify as solution", tmp, valid_str == tmp)
+

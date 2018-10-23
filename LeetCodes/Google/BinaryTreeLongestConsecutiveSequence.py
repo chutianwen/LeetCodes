@@ -36,6 +36,7 @@ class Solution(object):
         max_length = [0]
 
         def helper(root):
+            # from bottom-up
             if not root:
                 return 0
             left = helper(root.left)
@@ -52,6 +53,7 @@ class Solution(object):
 
     def longestConsecutive2(self, root):
         '''
+        From top to bottom
         Using BFS
         :param root:
         :return:

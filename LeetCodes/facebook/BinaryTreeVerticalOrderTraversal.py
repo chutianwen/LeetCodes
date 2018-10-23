@@ -101,7 +101,6 @@ class Solution:
 			for kid, idx in [(expand.left, idx - 1), (expand.right, idx + 1)]:
 				if kid:
 					if idx not in set_idx:
-						set_idx.add((idx))
 						if idx < 0:
 							res.insert(0, [kid.val])
 							num_expand_left += 1

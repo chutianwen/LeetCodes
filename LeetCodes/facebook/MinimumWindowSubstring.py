@@ -12,7 +12,6 @@ If there is such window, you are guaranteed that there will always be only one u
 
 '''
 
-from collections import defaultdict
 
 class Solution(object):
 	def minWindow(self, s, t):
@@ -21,6 +20,8 @@ class Solution(object):
 		:type t: str
 		:rtype: str
 		"""
+		from collections import defaultdict
+
 		letter_freq = defaultdict(int)
 		for letter in t:
 			letter_freq[letter] += 1
@@ -35,6 +36,7 @@ class Solution(object):
 			letter_freq[letter] -= 1
 			# fully matched
 			if missing == 0:
+				# if letter_freq[s[i]] == 0, means it matches
 				while i < id and letter_freq[s[i]] < 0:
 					letter_freq[s[i]] += 1
 					i += 1

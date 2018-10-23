@@ -76,5 +76,34 @@ class Solution(object):
             if not any(cnt.values()):  # check all letters count 0
                 res.append(i-(np-1))
         return res
+
+class Solution2(object):
+    def findAnagrams(self, s, p):
+        """
+        :type s: str
+        :type p: str
+        :rtype: List[int]
+        """
+        from collections import defaultdict
+        letter_required_num = defaultdict(int)
+        for letter in p:
+            letter_required_num[letter] += 1
+
+        num_missing = size_p = len(p)
+        res = []
+        for idx, letter in enumerate(s):
+            if letter_required_num[letter] > 0:
+                num_missing -= 1
+            letter_required_num[letter] -= 1
+
+            if idx >= size_p:
+                if letter_required_num[s[idx - size_p]] >= 0:
+                    num_missing += 1
+                letter_required_num[s[idx - size_p]] += 1
+
+            if num_missing == 0:
+                res.append(idx - size_p + 1)
+        return res
+
 res = Solution().findAnagrams("cbaebabacd", 'abc')
 print(res)

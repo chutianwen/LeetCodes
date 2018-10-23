@@ -61,3 +61,33 @@ class Solution:
 				if cur_sum > best_sum_pre:
 					res = (idx_left, idx_mid, idx_right)
 		return res
+
+class Solution2:
+	def maxSumOfThreeSubarrays(self, nums, k):
+		'''
+		I must admit that those start and end points of for loops are really disgusting due to problem :)
+		We first calculate sum(nums[i:i + k]), sum of one single subarray, for suitable indexes and store them in "single" dictionary.
+		After that from right to left we match next max subarray for each suitable subarray and store two subarrays information in "double" dictionary.
+		Finally, we match next max subarray couple (double) for each suitable subarray and change result if current subarray + couple bigger than result (sm).
+		Return result
+		:param nums:
+		:param k:
+		:return:
+		'''
+		single, double, sm, n, cur = {}, {}, 0, len(nums), sum(nums[:k - 1])
+		for i in range(k - 1, n):
+			cur += nums[i]
+			single[i - k + 1] = cur
+			cur -= nums[i - k + 1]
+		cur = n - k, single[n - k]
+		for i in range(n - k, k * 2 - 1, -1):
+			if single[i] >= cur[1]:
+				cur = i, single[i]
+			double[i - k] = cur[1] + single[i - k], i - k, cur[0]
+		cur = double[n - 2 * k]
+		for i in range(n - 2 * k, k - 1, -1):
+			if double[i][0] >= cur[0]:
+				cur = double[i]
+			if single[i - k] + cur[0] >= sm:
+				sm, res = single[i - k] + cur[0], [i - k, cur[1], cur[2]]
+		return res

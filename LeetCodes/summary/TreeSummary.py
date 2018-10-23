@@ -127,7 +127,7 @@ def build_binary_tree_from_pre_post(pre, post):
     if pre:
         node = TreeNode(pre.pop(0))
         post.pop()
-        if not post:return node
+        if not post: return node
         idx = pre.index(post[-1])
         node.left = self.constructFromPrePost(pre[:idx], post[:idx])
         node.right = self.constructFromPrePost(pre[idx:], post[idx:])

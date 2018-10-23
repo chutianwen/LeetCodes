@@ -47,7 +47,7 @@ class Solution(object):
 				if not flag:
 					return None, None, flag
 				head = lh
-				if root.val <= lt.val or root.val <= root.left.val:
+				if not root.val > lt.val:
 					return None, None, False
 
 			if root.right:
@@ -55,7 +55,7 @@ class Solution(object):
 				if not flag:
 					return None, None, flag
 				tail = rt
-				if root.val >= rh.val or root.val >= root.right.val:
+				if not root.val < rh.val:
 					return None, None, False
 
 			return head, tail, True

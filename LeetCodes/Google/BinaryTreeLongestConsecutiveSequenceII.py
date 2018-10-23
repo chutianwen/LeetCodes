@@ -41,6 +41,7 @@ class Solution(object):
             if node.val == parent.val - 1:
                 return 0, max(ld, rd) + 1
             return 0, 0
+
         l = [0]
         r = dfs(root, root)
         print(r)

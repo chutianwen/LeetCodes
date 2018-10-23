@@ -27,19 +27,8 @@ class Solution(object):
 		"""
 		if numerator == 0:
 			return "0"
-
-		flag = ""
-		if numerator < 0:
-			if denominator < 0:
-				numerator *= -1
-				denominator *= -1
-			else:
-				numerator *= -1
-				flag = "-"
-		else:
-			if denominator < 0:
-				denominator *= -1
-				flag = "-"
+		positive = (numerator > 0) is (denominator > 0)
+		flag = "" if positive else "-"
 
 		res = flag + str(numerator // denominator)
 
