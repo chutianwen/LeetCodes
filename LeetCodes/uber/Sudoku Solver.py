@@ -46,9 +46,9 @@ class Solution:
 					block_set[row // 3][col // 3].add(v)
 
 		# each time fill the place closer to the previous one will be much faster to reach the solution.
-		print("Before shuffle", empty_set, len(empty_set))
+		# print("Before shuffle", empty_set, len(empty_set))
 		# random.shuffle(empty_set)
-		print("End Shuffle", empty_set, len(empty_set))
+		# print("End Shuffle", empty_set, len(empty_set))
 
 		def is_valid(row, col, v):
 			return v not in row_set[row] and v not in col_set[col] and v not in block_set[row // 3][col // 3]
@@ -60,7 +60,7 @@ class Solution:
 
 			# print("before", empty_set)
 			row, col = empty_set.pop()
-			print("before", row, col, empty_set, "size", len(empty_set))
+			# print("before", row, col, empty_set, "size", len(empty_set))
 			for candidate in range(1, 10):
 				if is_valid(row, col, candidate):
 					board[row][col] = str(candidate)
@@ -74,7 +74,7 @@ class Solution:
 					block_set[row // 3][col // 3].remove(candidate)
 
 			empty_set.append((row, col))
-			print("after", row, col, empty_set, "size", len(empty_set))
+			# print("after", row, col, empty_set, "size", len(empty_set))
 			# print("after", empty_set)
 			return False
 

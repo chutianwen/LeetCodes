@@ -24,3 +24,22 @@ class Solution(object):
                 if p1 == p2:
                     return True
             return False
+
+class Solution(object):
+    def hasCycle(self, head):
+        """
+        :type head: ListNode
+        :rtype: bool
+        """
+        if not head:
+            return False
+
+        slow = fast = head
+        is_first = True
+        while fast and fast.next:
+            if not is_first and slow is fast:
+                return True
+            slow = slow.next
+            fast = fast.next.next
+            is_first = False
+        return False

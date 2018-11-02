@@ -8,7 +8,7 @@ def speed_test(speed_limit, car):
 	res = []
 	start = 0
 
-	while not (p_limit == len(speed_limit) - 1 and p_car == len(car) - 1):
+	while p_limit < len(speed_limit) and p_car < len(car):
 
 		if car[p_car][0] <= speed_limit[p_limit][0]:
 
@@ -21,9 +21,9 @@ def speed_test(speed_limit, car):
 				res.append((start, speed_limit[p_limit][0]))
 			start = speed_limit[p_limit][0]
 			p_limit += 1
-
-	if speed_limit[-1][1] < car[-1][1]:
-		res.append((start, car[-1][0]))
+	#
+	# if speed_limit[-1][1] < car[-1][1]:
+	# 	res.append((start, car[-1][0]))
 
 	print(res)
 

@@ -110,3 +110,21 @@ class Solution2(object):
 
         driver(0, len(nums) - 1)
         return res
+
+    def combination(self, nums, k):
+        res = []
+
+        def dfs(nums, path):
+            if len(path) == k:
+                res.append(path)
+                return
+
+            for idx in range(len(nums)):
+                dfs(nums[idx + 1:], path + [nums[idx]])
+
+        dfs(nums, [])
+        for r in res:
+            print(r)
+
+print("Combination")
+Solution2().combination([1,2,3,4], 2)
