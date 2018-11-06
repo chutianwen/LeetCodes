@@ -23,7 +23,6 @@ class Solution:
 		:type x: int
 		:rtype: List[int]
 		"""
-
 		lo, hi = 0, len(arr) - k - 1
 		while lo <= hi:
 			mid = (lo + hi) // 2
@@ -35,13 +34,13 @@ class Solution:
 		return arr[lo: lo + k]
 
 	def findClosestElementsMaxHeap(self, arr, k, x):
-		'''
+		"""
 		Unsorted array is provided.
 		:param arr:
 		:param k:
 		:param x:
 		:return:
-		'''
+		"""
 
 		import heapq
 		max_heap = []

@@ -37,3 +37,22 @@ class Solution(object):
 				pre = num
 
 		return max_length
+
+class Solution2:
+	def longestConsecutive(self, nums):
+		"""
+		:type nums: List[int]
+		:rtype: int
+		"""
+		unique = set(nums)
+		max_len = 0
+		for num in unique:
+			if num - 1 not in unique:
+
+				start, cnt = num, 0
+				while start in unique:
+					cnt += 1
+					start += 1
+				max_len = max(max_len, cnt)
+
+		return max_len

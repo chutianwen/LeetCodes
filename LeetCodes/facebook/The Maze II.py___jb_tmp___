@@ -60,6 +60,7 @@ class Solution:
 		while frontier:
 			cost, pos = heapq.heappop(frontier)
 
+			# this is because of pos may be added very early, but with high cost.
 			if cost > best.get(pos, float('inf')):
 				continue
 
