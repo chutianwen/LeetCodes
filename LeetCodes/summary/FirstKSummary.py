@@ -101,14 +101,16 @@ class QuickSelect:
 		"""
 		left = start  # save for the counterpart's pivot
 		i = start + 1
+		is_first = True
 		while i <= end:
 			if A[i] < pivot:
 				left += 1
 				if left != i:
 					A[left], A[i] = A[i], A[left]
 				i += 1
-			elif A[i] == pivot:
+			elif A[i] == pivot and is_first:
 				A[start], A[i] = A[i], A[start]
+				is_first = False
 			else:
 				i += 1
 
@@ -119,81 +121,60 @@ class QuickSelect:
 		return left
 
 
-test = [3, 1, 1, 3, 4]
-print(QuickSelect().partition_with_pivot_v2(test, 0, len(test) - 1, 5))
-print(test)
+import unittest
 
-test = [3, 1, 1, 3, 4]
-print(QuickSelect().partition_with_pivot(test, 0, len(test) - 1, 5))
-print(test)
+class FirstKTest(unittest.TestCase):
 
-import random
+	def setUp(self):
+		pass
 
-nums = [random.randint(1, 100) for _ in range(10)]
-# nums = [2,5,1,3,5,6,3,3]
-print(nums)
+	def test_example(self):
+		test = [3, 1, 1, 3, 4]
+		print(QuickSelect().partition_with_pivot_v2(test, 0, len(test) - 1, 5))
+		print(test)
 
-QuickSelect().quick_sort(nums)
-print(nums)
+		test = [3, 1, 1, 3, 4]
+		print(QuickSelect().partition_with_pivot(test, 0, len(test) - 1, 5))
+		print(test)
 
-for _ in range(10):
-	nums = [random.randint(1, 100) for _ in range(10)]
-	print(nums)
-	QuickSelect().first_kth(nums, 3)
+		import random
 
-print("Special case")
-nums = [num for num in range(10, 0, -1)]
-print(nums)
-QuickSelect().first_kth(nums, 3)
+		nums = [random.randint(1, 100) for _ in range(10)]
+		# nums = [2,5,1,3,5,6,3,3]
+		print(nums)
 
-print("small and high match")
-nums_small = [4, 1, 1, 3, 4]
-nums_large = [2, 3, 2, 5, 5]
-QuickSelect().smaller_match_hi(nums_small, nums_large)
-print("After matching:")
-print("nums_small", nums_small)
-print("nums_large", nums_large)
+		QuickSelect().quick_sort(nums)
+		print(nums)
+
+		for _ in range(10):
+			nums = [random.randint(1, 100) for _ in range(10)]
+			print(nums)
+			QuickSelect().first_kth(nums, 3)
+
+		print("Special case")
+		nums = [num for num in range(10, 0, -1)]
+		print(nums)
+		QuickSelect().first_kth(nums, 3)
+
+		print("small and high match")
+		nums_small = [4, 1, 1, 3, 4]
+		nums_large = [2, 3, 2, 5, 5]
+		QuickSelect().smaller_match_hi(nums_small, nums_large)
+		print("After matching:")
+		print("nums_small", nums_small)
+		print("nums_large", nums_large)
+
+	def test_non_unique_example(self):
+
+		print("small and high match")
+		nums_small = [5, 4, 5, 5, 5]
+		nums_large = [5, 4, 5, 5, 5]
+		QuickSelect().smaller_match_hi(nums_small, nums_large)
+		print("After matching:")
+		print("nums_small", nums_small)
+		print("nums_large", nums_large)
 
 
-class Solution(object):
-	def quick_select(self, nums, lo, hi, k):
-
-		if lo < hi:
-			partition = self.partition(nums, lo, hi)
-			if partition == k - 1:
-				return nums[partition]
-			elif partition < k - 1:
-				return self.quick_select(nums, partition + 1, hi, k)
-			else:
-				return self.quick_select(nums, lo, partition - 1, k)
-		elif lo == hi:
-			return nums[lo]
-
-	def partition(self, nums, lo, hi):
-
-		pivot = nums[hi]
-
-		p1, p2 = lo, hi - 1
-		while p1 <= p2:
-
-			while p1 <= p2 and nums[p1] <= pivot:
-				p1 += 1
-
-			while p1 <= p2 and nums[p2] > pivot:
-				p2 -= 1
-
-			if p1 > p2:
-				break
-
-			nums[p1], nums[p2] = nums[p2], nums[p1]
-
-		nums[hi], nums[p1] = nums[p1], nums[hi]
-		return p1
-
-	def findKthLargest(self, nums, k):
-		"""
-		:type nums: List[int]
-		:type k: int
-		:rtype: int
-		"""
-		return self.quick_select(nums, 0, len(nums) - 1, k)
+if __name__ == "__main__":
+	test = FirstKTest()
+	test.test_non_unique_example()

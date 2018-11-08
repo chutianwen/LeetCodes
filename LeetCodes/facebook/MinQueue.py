@@ -1,5 +1,7 @@
 from collections import deque
+
 class MinQueue(deque):
+
 	def __init__(self):
 		deque.__init__(self)
 		self.mins = deque()
@@ -24,7 +26,7 @@ q = MinQueue()
 i = [2,4,1,2,5,3]
 for x in i:
 	q.append(x)
-
+help()
 print(q)
 print(q.mins)
 while q:

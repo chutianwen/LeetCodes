@@ -58,9 +58,12 @@ class Solution(object):
 
 				if (m + n) & 1:
 					return max_left
-
 				if mid == m: min_right = nums2[j]
 				elif j == n: min_right = nums1[mid]
 				else: min_right = min(nums1[mid], nums2[j])
 
-				return (max_left + min_right) / 2
+				return (max_left + min_right)
+
+
+res = Solution().findMedianSortedArrays([1,2,4,25,222], [2,3,5,66])
+print(res)

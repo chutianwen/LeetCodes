@@ -37,7 +37,7 @@ class Solution(object):
 			if num == 0:
 				return cnt
 
-			buf[cnt: cnt + num ] = buffer[: num]
+			buf[cnt: cnt + num] = buffer[: num]
 			cnt += num
 			n -= num
 
