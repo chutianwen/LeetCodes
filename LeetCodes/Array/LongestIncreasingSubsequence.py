@@ -39,21 +39,19 @@ class Solution(object):
 
 class Solution2(object):
     def lengthOfLIS(self, nums):
-        if not nums or len(nums) == 0:
-            return 0
-
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
         from bisect import bisect_left
-        cache = [nums[0]]
-        max_length = 1
-        for num in nums[1:]:
+        cache = []
+        for num in nums:
             pos = bisect_left(cache, num)
-            print(num, pos, cache)
             if pos == len(cache):
                 cache.append(num)
             else:
                 cache[pos] = num
-            max_length = max(max_length, pos + 1)
-        return max_length
+        return len(cache)
 
 
 

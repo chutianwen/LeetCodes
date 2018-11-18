@@ -25,6 +25,8 @@ class Solution(object):
         wordDict = filter(lambda x: x in s, wordDict)
         words = set(wordDict)
 
+        from collections import defaultdict
+        explored = defaultdict
         def driver(word):
             if word in words:
                 return True
@@ -119,6 +121,19 @@ class Solution(object):
 
         return False
 
+    def wordBreakDP2(self, s, wordDict):
+
+        words = set(wordDict)
+        cache = [False] * (len(s) + 1)
+        cache[0] = True
+
+        for i in range(1, len(s) + 1):
+            for j in range(0, i):
+                if cache[j] and s[j: i] in words:
+                    cache[i] = True
+                    break
+        return cache[-1]
+
 class Solution2(object):
     def wordBreak(self, s, wordDict):
         """
@@ -181,7 +196,8 @@ class Trie(object):
 
             if root.children[char].isWord:
                 if self.search(s[i + 1:]):
-                    return True
+                    return True     
+
             root = root.children[char]
         return root.isWord
 
@@ -193,11 +209,41 @@ class Solution3(object):
 
         return trie.search(s)
 
+class Solution4:
+    def wordBreak(self, s, wordDict):
+        """
+        Optimal
+        :type s: str
+        :type wordDict: List[str]
+        :rtype: bool
+        """
+        explored = dict()
+        stop = len(s)
+        words = set(wordDict)
+
+        def dfs(start):
+            if start == stop:
+                return True
+
+            for split in range(start + 1, stop + 1):
+                if split in explored:
+                    continue
+
+                part_left = s[start: split]
+                if part_left in words and dfs(split):
+                    return True
+
+            explored[start] = False
+            return False
+
+        return dfs(0)
+
+
 # s = "bb"
 # dict = ["a", "b", "bbb", "bbbb"]
-s = "leetcode"
-dict = ['leet', 'code']
-res = Solution2().wordBreak(s, dict)
+s = ""
+dict = ['leet', 'code', ""]
+res = Solution3().wordBreak(s, dict)
 print(res)
 
 
@@ -217,8 +263,3 @@ def fun(x):
     for v in range(x):
         sum += v
     return sum
-
-print("Start")
-print(fun(100000000))
-print("Start--")
-print(fun(100000000))

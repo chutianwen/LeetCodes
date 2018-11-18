@@ -40,6 +40,34 @@ class Solution(object):
         return res
 
 
-res = Solution().combinationSum2([1, -1, 2, -2, 0, 3, 3], 0)
-res = list(map(list, set(map(tuple, res))))
+class Solution2:
+    def combinationSum2(self, candidates, target):
+        """
+        :type candidates: List[int]
+        :type target: int
+        :rtype: List[List[int]]
+        """
+
+        candidates.sort()
+
+        def dfs(nums, cur):
+            res = []
+            for id, num in enumerate(nums):
+                if num > cur:
+                    break
+                if num == cur:
+                    res.append([num])
+                    break
+                if id > 0 and nums[id] == nums[id - 1]:
+                    continue
+                subs = dfs(nums[id + 1:], cur - num)
+                res.extend(map(lambda x: [num] + x, subs))
+
+            return res
+
+        return dfs(candidates, target)
+
+input = [-1,1,0]
+t = 0
+res = Solution2().combinationSum2(input, t)
 print(res)

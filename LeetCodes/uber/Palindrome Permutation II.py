@@ -66,6 +66,7 @@ class Solution2:
 
 		cnt_odd = 0
 		letter_odd = ""
+		num_required = 0
 		for letter in letter_cnt:
 			# if odd
 			if letter_cnt[letter] & 1:
@@ -75,25 +76,27 @@ class Solution2:
 					return []
 
 			letter_cnt[letter] //= 2
-
+			num_required += letter_cnt[letter]
 		res = []
 
-		def driver(cur):
-			if sum(letter_cnt.values()) == 0:
+
+		def driver(cur, num_required):
+			if num_required == 0:
 				res.append(cur + letter_odd + cur[::-1])
 			else:
 				for path in letter_cnt:
 					if letter_cnt[path] > 0:
 						letter_cnt[path] -= 1
-						driver(cur + path)
+						driver(cur + path, num_required - 1)
 						letter_cnt[path] += 1
 
 		driver("")
 		return res
 
 
-res = Solution().generatePalindromes("aabb")
+
+# res = Solution().generatePalindromes("aabb")
 # print(res)
 
-res2 = Solution2().generatePalindromes("aabb")
-print(res)
+res2 = Solution2().generatePalindromes("ab")
+print(res2)

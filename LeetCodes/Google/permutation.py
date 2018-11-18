@@ -94,23 +94,6 @@ class Solution2(object):
         driver(0, len(nums) - 1)
         return res
 
-    def permuteUnique(self, nums):
-        res = []
-        nums.sort()
-
-        def driver(l, r):
-            if l == r:
-                res.append(list(nums))
-            else:
-                for id in range(l, r + 1):
-                    if id == 0 or nums[id] != nums[id-1]:
-                        nums[id], nums[l] = nums[l], nums[id]
-                        driver(l + 1, r)
-                        nums[id], nums[l] = nums[l], nums[id]
-
-        driver(0, len(nums) - 1)
-        return res
-
     def combination(self, nums, k):
         res = []
 
@@ -127,4 +110,5 @@ class Solution2(object):
             print(r)
 
 print("Combination")
-Solution2().combination([1,2,3,4], 2)
+res = Solution().permuteUnique([1,1,2,3])
+print(res)

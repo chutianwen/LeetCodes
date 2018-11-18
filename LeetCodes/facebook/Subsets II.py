@@ -52,6 +52,37 @@ class Solution:
 
 		return res
 
+class Solution2:
+	def subsetsWithDup(self, nums):
+		"""
+		:type nums: List[int]
+		:rtype: List[List[int]]
+		"""
+
+		explored = dict()
+		stop = len(nums)
+		nums.sort()
+
+		def dfs(start):
+			if start in explored:
+				return explored[start]
+
+			if start == stop:
+				return []
+
+			res = []
+			for split in range(start, stop):
+				if split > start and nums[split] == nums[split - 1]:
+					continue
+				subsets = dfs(split + 1)
+				res.append([nums[split]])
+				res.extend(map(lambda subset: [nums[split]] + subset, subsets))
+
+			explored[start] = res
+			return res
+
+		return [[]] + dfs(0)
+
 a = [1,2,2]
 
 print(Solution().subsetsWithDup(a))
