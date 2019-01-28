@@ -23,20 +23,20 @@ class Solution:
 		h, w = len(grid), len(grid[0])
 		def driver(bot_left, top_right):
 
+			if top_right[0] == bot_left[0] or bot_left[1] == top_right[1]:
+				return None
 
 			is_leaf = True
-			pre = "*"
+			v = grid[top_right[0]][bot_left[1]]
 			for row in range(top_right[0], bot_left[0]):
 				for col in range(bot_left[1], top_right[1]):
-					if pre != "*" and grid[row][col] != pre:
-						is_leaf = False
-						pre = "*"
+					if grid[row][col] != v:
+						is_leaf, v = False, "*"
 						break
-					pre = grid[row][col]
 
 			# print(bot_left, top_right, pre, is_leaf)
-			if is_leaf and pre != "*":
-				return Node(pre, is_leaf, None, None, None, None)
+			if is_leaf:
+				return Node(v, is_leaf, None, None, None, None)
 			elif not is_leaf:
 
 				mid_row = top_right[0] + (bot_left[0] - top_right[0]) // 2
@@ -76,7 +76,7 @@ class Solution:
 				if pre == "*":
 					return None
 				else:
-					return Node(pre, is_leaf, None, None, None, None)
+				we	return Node(pre, is_leaf, None, None, None, None)
 			else:
 
 				mid_row = top_right[0] + (bot_left[0] - top_right[0]) // 2

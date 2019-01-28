@@ -102,13 +102,16 @@ class Solution2(object):
                 res.append(path)
                 return
 
+            explored = set()
             for idx in range(len(nums)):
-                dfs(nums[idx + 1:], path + [nums[idx]])
+                if nums[idx] not in explored:
+                    explored.add(nums[idx])
+                    dfs(nums[idx + 1:], path + [nums[idx]])
 
         dfs(nums, [])
         for r in res:
             print(r)
 
 print("Combination")
-res = Solution().permuteUnique([1,1,2,3])
+res = Solution2().combination([1,1,2,3], 2)
 print(res)

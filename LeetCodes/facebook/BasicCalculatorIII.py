@@ -51,8 +51,62 @@ class Solution(object):
 						return sum(stack), i
 					sign = c
 			return sum(stack)
+
 		return helper([], 0)
 
+input = "2*(5+5*2)/3+4*(5 + (6/2+8))"
 
-res = Solution().calculate("(2+6* 3+5- (3*14/7+2)*5)+3")
+res = Solution().calculate(input)
 print(res)
+
+
+class Solution2:
+	def calculate(self, s):
+		"""
+		:type s: str
+		:rtype: int
+		"""
+		s += "$"
+
+		end = len(s)
+		def parse(i):
+			# print(i)
+			num = cur = pre = 0
+			sign = "+"
+			while i < end:
+				letter = s[i]
+				if letter == " ":
+					i += 1
+				elif letter.isdigit():
+					cur = cur * 10 + int(letter)
+					i += 1
+				elif letter == "(":
+					cur, i = parse(i + 1)
+				else:
+
+					# if sign == "+":
+					# 	num += cur
+					if sign == "-":
+						cur *= -1
+
+					if sign == "*":
+						num -= pre
+						cur *= pre
+
+					if sign == "/":
+						num -= pre
+						cur = pre // cur if pre > 0 else -(-pre // cur)
+
+					num += cur
+					pre = cur
+					cur = 0
+					i += 1
+					if letter == ")":
+						return num, i
+					sign = letter
+
+			return num
+
+		return parse(0)
+
+print(Solution2().calculate(input))

@@ -107,6 +107,82 @@ class LFUCache(object):
             self.map[key] = node
 
 
+from collections import defaultdict
+from collections import OrderedDict
+
+class Node:
+    def __init__(self, key, val, count):
+        self.key = key
+        self.val = val
+        self.count = count
+
+from collections import defaultdict, OrderedDict
+class Node:
+    def __init__(self, key, value):
+        self.key = key
+        self.value = value
+        self.cnt = 1
+
+
+class LFUCache2:
+
+    def __init__(self, capacity):
+        """
+        :type capacity: int
+        """
+        self.capacity = capacity
+        self.keyToNode = dict()
+        self.countToKeyNode = defaultdict(OrderedDict)
+        self.min_cnt = 1
+
+    def get(self, key):
+        """
+        :type key: int
+        :rtype: int
+        """
+        if key not in self.keyToNode:
+            return -1
+
+        node = self.keyToNode[key]
+        self.countToKeyNode[node.cnt].pop(key)
+        if not self.countToKeyNode[node.cnt]:
+            self.countToKeyNode.pop(node.cnt)
+            if self.min_cnt == node.cnt:
+                self.min_cnt += 1
+
+        node.cnt += 1
+        self.countToKeyNode[node.cnt][key] = node
+
+        return node.value
+
+    def put(self, key, value):
+        """
+        :type key: int
+        :type value: int
+        :rtype: void
+        """
+        if not self.capacity:
+            return
+
+        if key in self.keyToNode:
+            node = self.keyToNode[key]
+            node.value = value
+            self.get(key)
+        else:
+            if len(self.keyToNode) == self.capacity:
+                old_key, _  = self.countToKeyNode[self.min_cnt].popitem(last=False)
+                self.keyToNode.pop(old_key)
+
+            new_node = Node(key, value)
+            self.keyToNode[key] = new_node
+            self.countToKeyNode[1][key] = new_node
+            self.min_cnt = 1
+
+
+# Your LFUCache object will be instantiated and called as such:
+# obj = LFUCache(capacity)
+# param_1 = obj.get(key)
+# obj.put(key,value)
 cache = LFUCache(2)
 cache.put(1, 1)
 cache.put(2, 2)

@@ -81,26 +81,32 @@ class Solution2:
 
 		# this serves as action space, keep tracking of valid actions.
 		visit = [0 for i in range(len(nums))]
-		target= sum(nums) // k
+		target, rem = divmod(sum(nums), k)
+		if rem: return False
+
+		nums.sort()
+		end = len(nums) - 1
+		while end >= 0:
+			if nums[end] == target:
+				k -= 1
+				end -= 1
+			else:
+				break
 
 		def DFS(k, fromindex, cursum):
-			if k == 1 and cursum == target:
+			if k == 0:
 				return True
-			if cursum == target:
-				return DFS(k-1, 0, 0)
 			else:
-				for i in range(fromindex, len(nums)):
-					# if visit[i]:
-					# print("!!!!", i, visit)
-					if nums[i] + cursum <= target and not visit[i]:
+				for i in range(fromindex, end + 1):
+					if not visit[i] and nums[i] + cursum <= target:
 						visit[i] = 1
-						if DFS(k, i + 1, cursum + nums[i]):
-							return True
+						next_sum = cursum + nums[i]
+						if next_sum == target:
+							if DFS(k - 1, 0, 0): return True
+						else:
+							if DFS(k, i + 1, next_sum): return True
 						visit[i] = 0
 				return False
-
-		if sum(nums) % k != 0 or k > sum(nums):
-			return False
 
 		return DFS(k, 0, 0)
 
@@ -152,3 +158,54 @@ class Solution:
 			num_group -= 1
 
 		return driver([0] * num_group)
+
+
+class Solution3:
+	def canPartitionKSubsets(self, nums, k):
+		"""
+		:type nums: List[int]
+		:type k: int
+		:rtype: bool
+		"""
+		if not k or not nums:
+			return False
+
+		target, remain = divmod(sum(nums), k)
+		if remain:
+			return False
+
+		nums.sort()
+		end = len(nums) - 1
+		while end >= 0:
+			if nums[end] == target:
+				k -= 1
+				end -= 1
+			else:
+				break
+		print(nums[:end + 1], target, k)
+		visited = [False] * (end + 1)
+		def dfs(k_group, cur_sum, start):
+			if k_group == 0:
+				return True
+			else:
+				for split in range(start, end + 1):
+					next = cur_sum + nums[split]
+					if next > target:
+						break
+
+					if not visited[split] and next <= target:
+						print(start, split, next)
+						visited[split] = True
+						if next == target:
+							if dfs(k_group - 1, 0, 0): return True
+						elif next < target:
+							if dfs(k_group, next, split + 1): return True
+
+						# visited[split] = False
+
+				return False
+
+		return dfs(k, 0, 0)
+
+res = Solution3().canPartitionKSubsets([1,2,3,4], 2)
+print(res)

@@ -19,6 +19,9 @@ Special thanks to @ts for adding this problem and creating all test cases.
 #         self.right = None
 
 class BSTIterator(object):
+	'''
+	Just an inorder traversal
+	'''
 	def __init__(self, root):
 		"""
 		:type root: TreeNode
@@ -35,7 +38,7 @@ class BSTIterator(object):
 	def next(self):
 		"""
 		:rtype: int
-		"""Binary Tree
+		"""
 		while self.track:
 			self.frontier.append(self.track)
 			self.track = self.track.left

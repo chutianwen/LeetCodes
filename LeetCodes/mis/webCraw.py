@@ -12,7 +12,7 @@ class MultiThreadScraper:
 		self.root_url = '{}://{}'.format(urlparse(self.base_url).scheme, urlparse(self.base_url).netloc)
 		self.pool = ThreadPoolExecutor(max_workers=20)
 		self.scraped_pages = set()
-		self.to_crawl = Queue()
+		self.to_crawl = Queue
 		self.to_crawl.put(self.base_url)
 
 

@@ -85,4 +85,4 @@ class Solution2:
 
 a = [1,2,2]
 
-print(Solution().subsetsWithDup(a))
+print(Solution2().subsetsWithDup(a))
