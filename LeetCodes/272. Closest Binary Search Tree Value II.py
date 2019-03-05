@@ -130,10 +130,41 @@ class Solution:
 				next_path(path_larger, frontier_right, frontier_left)
 		return res
 
-2
-33
-25
-11
-10
-4
-3
+class Solution:
+	def closestKValues(self, root, target, k):
+
+		abs_dis = lambda x: abs(x.val - target)
+
+		stack_small = []
+		while root:
+			stack_small.append(root)
+			root = root.left if target < root.val else root.right
+
+		closest_cut = min(stack_small, key=abs_dis)
+		stack_small = stack_small[:stack_small.index(closest_cut) + 1]
+		stack_large = stack_small[:]
+
+		def next(stack, fun1, fun2):
+
+			if fun1(stack):
+				stack.append(fun1(stack))
+				while fun2(stack):
+					stack.append(fun2(stack))
+			else:
+				cur = stack.pop()
+				while stack and cur == fun1(stack):
+					cur = stack.pop()
+
+		frontier_left = lambda x: x[-1].left
+		frontier_right = lambda x: x[-1].right
+
+		next(stack_large, frontier_right, frontier_left)
+		res = []
+		for _ in range(k):
+			if not stack_large or stack_small and abs_dis(stack_small[-1]) <= abs_dis(stack_large[-1]):
+				res.append(stack_small[-1].val)
+				next(stack_small, frontier_left, frontier_right)
+			else:
+				res.append(stack_large[-1].val)
+				next(stack_large, frontier_right, frontier_left)
+		return res

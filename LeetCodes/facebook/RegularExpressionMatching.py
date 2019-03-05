@@ -57,7 +57,6 @@ class Solution(object):
 			return not s
 
 		if not s:
-			print(p)
 			if len(p) & 1:
 				return False
 

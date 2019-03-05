@@ -1,0 +1,17 @@
+Name,Suffix,Abs path
+test,/test,/Users/tianwenchu/Desktop/ResearchRepos/LeetCodes/LeetCodes/fun/test
+A,py,/Users/tianwenchu/Desktop/ResearchRepos/LeetCodes/LeetCodes/fun/A.py
+__init__,py,/Users/tianwenchu/Desktop/ResearchRepos/LeetCodes/LeetCodes/fun/__init__.py
+__pycache__,/__pycache__,/Users/tianwenchu/Desktop/ResearchRepos/LeetCodes/LeetCodes/fun/__pycache__
+ListFile,py,/Users/tianwenchu/Desktop/ResearchRepos/LeetCodes/LeetCodes/fun/ListFile.py
+B,py,/Users/tianwenchu/Desktop/ResearchRepos/LeetCodes/LeetCodes/fun/B.py
+subtest,/test/subtest,/Users/tianwenchu/Desktop/ResearchRepos/LeetCodes/LeetCodes/fun/test/subtest
+BasicCalculatorIV,py,/Users/tianwenchu/Desktop/ResearchRepos/LeetCodes/LeetCodes/fun/test/BasicCalculatorIV.py
+BasicCalculatorII,py,/Users/tianwenchu/Desktop/ResearchRepos/LeetCodes/LeetCodes/fun/test/BasicCalculatorII.py
+BasicCalculatorIII,py,/Users/tianwenchu/Desktop/ResearchRepos/LeetCodes/LeetCodes/fun/test/BasicCalculatorIII.py
+big,conf,/Users/tianwenchu/Desktop/ResearchRepos/LeetCodes/LeetCodes/fun/test/subtest/big.conf
+subsubtest,/test/subtest/subsubtest,/Users/tianwenchu/Desktop/ResearchRepos/LeetCodes/LeetCodes/fun/test/subtest/subsubtest
+silly,php,/Users/tianwenchu/Desktop/ResearchRepos/LeetCodes/LeetCodes/fun/test/subtest/subsubtest/silly.php
+B,pyc,/Users/tianwenchu/Desktop/ResearchRepos/LeetCodes/LeetCodes/fun/__pycache__/B.cpython-36.pyc
+A,pyc,/Users/tianwenchu/Desktop/ResearchRepos/LeetCodes/LeetCodes/fun/__pycache__/A.cpython-36.pyc
+__init__,pyc,/Users/tianwenchu/Desktop/ResearchRepos/LeetCodes/LeetCodes/fun/__pycache__/__init__.cpython-36.pyc

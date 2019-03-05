@@ -51,6 +51,7 @@ class Solution2(object):
                 cache.append(num)
             else:
                 cache[pos] = num
+            print(cache)
         return len(cache)
 
 

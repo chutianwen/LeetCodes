@@ -52,7 +52,7 @@ class Solution(object):
 
 		return pre_one_step
 
-res= Solution().numDecodings("10")
+res= Solution().numDecodings("104")
 print(res)
 
 

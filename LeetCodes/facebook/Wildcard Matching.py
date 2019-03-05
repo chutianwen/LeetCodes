@@ -106,7 +106,7 @@ class SolutionDP(object):
 			for col in range(1, n + 1):
 				if p[col - 1] == "?" or p[col - 1] == s[row - 1]:
 					cache[row][col] = cache[row-1][col-1]
-				elif p[col -- 1] == "*":
+				elif p[col - 1] == "*":
 					cache[row][col] = cache[row-1][col] or cache[row][col -1]
 		return cache[m][n]
 
